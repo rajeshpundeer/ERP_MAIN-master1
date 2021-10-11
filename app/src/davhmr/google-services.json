@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1061992165221",
+    "firebase_url": "https://davhmr-ce5db.firebaseio.com",
+    "project_id": "davhmr-ce5db",
+    "storage_bucket": "davhmr-ce5db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061992165221:android:01145cc6cca55df313fb8c",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.davhmr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061992165221-6o7mrpruecmi3n3s514tn8a74uh145nm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.davhmr",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "1061992165221-btb3cgea968lvhos8i2udp2tm4bkdcpu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYlg36JTW3D9uaGbLqBeTu71xS9f4D3-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1061992165221-btb3cgea968lvhos8i2udp2tm4bkdcpu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

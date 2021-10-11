@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/re_date"
+            android:gravity="start"
+            android:paddingStart="20dp"
+            android:layout_weight="0.50"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/Grey_dark"/>
+        <TextView
+            android:id="@+id/re_amount"
+            android:gravity="center"
+            android:layout_weight="0.25"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Grey_dark"
+            android:textSize="20sp"/>
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.20"
+            android:layout_width="0dp"
+            android:layout_height="40dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/re_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/view"
+                android:theme="@style/Button.Primary" />
+        </LinearLayout>
+<!--        <Button-->
+<!--            android:id="@+id/re_view"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:layout_weight="0.20"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:text="@string/view"-->
+<!--            android:theme="@style/Button.Primary"/>-->
+    </LinearLayout>
+
+</LinearLayout>

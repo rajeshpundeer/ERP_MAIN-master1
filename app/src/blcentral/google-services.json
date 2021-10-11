@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "924233310529",
+    "firebase_url": "https://blcs-e5679.firebaseio.com",
+    "project_id": "blcs-e5679",
+    "storage_bucket": "blcs-e5679.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924233310529:android:700cdf0a7419e7635741c0",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.blcentral"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924233310529-4tstrkcesiv1tj2gt1208fhp1s1j1t30.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.blcentral",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "924233310529-jaqrk5kq1cn8jjvo4aleijfr47rqte52.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-Q6ikuYvbkm3eRe7jgsijHDR2CCeyMNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924233310529-jaqrk5kq1cn8jjvo4aleijfr47rqte52.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

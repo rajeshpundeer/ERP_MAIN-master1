@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "761812221610",
+    "project_id": "sacred-heart-dalhousie",
+    "storage_bucket": "sacred-heart-dalhousie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761812221610:android:6b50fbfe363b3362201ad3",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.shsdalhousie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761812221610-8q6p73mbodomgkv0shpsfdkr1vubc6o7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.shsdalhousie",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "761812221610-6j68p0jirb7o174tq82eqvu9q4gto3m6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRCaKAr0VwR8LaGwxWvk906GD5rPUETyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761812221610-6j68p0jirb7o174tq82eqvu9q4gto3m6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

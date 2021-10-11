@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "531861877432",
+    "firebase_url": "https://davtauni-d3688.firebaseio.com",
+    "project_id": "davtauni-d3688",
+    "storage_bucket": "davtauni-d3688.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531861877432:android:83613453d86367e8aeba4d",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.davtn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531861877432-lpdgrip1vbgc49298eo8fvosomileauf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.davtn",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "531861877432-jdc11n63smahhsniq9ar0ldvoomt3rnr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACPSmj2hFTFdTjYkuhuXP0RH3p6CdqSqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "531861877432-jdc11n63smahhsniq9ar0ldvoomt3rnr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

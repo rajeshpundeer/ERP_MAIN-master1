@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "757820983476",
+    "project_id": "dav-nerchowk",
+    "storage_bucket": "dav-nerchowk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757820983476:android:3a8277684fd98197912fe1",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.davnerchowk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757820983476-t4uadsb79jbqsds2jpr4ht27hb5kqqe2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.davnerchowk",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "757820983476-ng4baj9lbp268usfmudfulavgc4aen5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFjOgjU8O1IQZ9FO2o3KxMVpK9HBp7EW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757820983476-ng4baj9lbp268usfmudfulavgc4aen5j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "664463170520",
+    "project_id": "the-good-sheffered",
+    "storage_bucket": "the-good-sheffered.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664463170520:android:7cd5a1eb85d125dba3f0ad",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.tgss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664463170520-endums776oo8cv8n77tlj2hj49de3h56.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.tgss",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "664463170520-pkoehjn38q173kgl1qdqdmio4krpom4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8sU1tkqPVigFy_KEnfah0iCgrJj-NxbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664463170520-pkoehjn38q173kgl1qdqdmio4krpom4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

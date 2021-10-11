@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="320dp"
+    android:padding="15dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_unit"
+        android:textColor="@color/grey_80"
+        android:textSize="22sp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/quicksand_bold"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bt_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_gravity="right"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="@android:color/white"
+        app:backgroundTint="@color/grey_80"
+        app:elevation="0dp"
+        app:fabSize="mini"
+        app:rippleColor="@android:color/white"
+        app:srcCompat="@drawable/ic_close" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_20"
+        android:layout_marginTop="@dimen/actionBarSize"/>
+    <LinearLayout
+        android:layout_marginTop="@dimen/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center">
+      <EditText
+          android:id="@+id/ed_addunit"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:minLines="1"
+          android:hint="@string/enter_unit_name_here"
+          android:layout_marginLeft="@dimen/tendp"
+          android:layout_marginRight="@dimen/tendp"
+          android:background="@drawable/edit_text_round_bg_outline"/>
+
+        <Button
+            android:id="@+id/btnok"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:background="@drawable/btn_rounded_accent"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:fontFamily="@font/lato_black"/>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

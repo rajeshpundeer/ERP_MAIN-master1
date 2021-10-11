@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1087651562206",
+    "project_id": "sunrise-school-bhambla",
+    "storage_bucket": "sunrise-school-bhambla.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087651562206:android:3b86352a91a4d5b7d5b84f",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.srb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1087651562206-ndg6tact4guojjt1fhgq76spn9cpmvt2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.srb",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "1087651562206-tdfeijcvlal13o1s4gvghb3utrapmpq7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFR0h_z_1chjsf_Jj8lQ1daqqN8yooLsk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1087651562206-tdfeijcvlal13o1s4gvghb3utrapmpq7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llTimeTable"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="3.08">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_weight=".02"/>
+
+    <TextView
+        android:id="@+id/tvQuestionno"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/fortydp"
+        android:layout_weight=".5"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:background="@drawable/ic_btn_view_six"
+        android:fontFamily="@font/lato_regular"
+        android:layout_marginBottom="@dimen/threedp"
+        android:padding="@dimen/fivedp"
+        android:textStyle="normal"
+        android:typeface="serif" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_weight=".02" />
+
+
+    <TextView
+        android:id="@+id/tvSubmittedAns"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/fortydp"
+        android:layout_weight="1.4"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:background="@drawable/ic_btn_view_six"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="18sp"
+        android:padding="@dimen/fivedp"
+        android:layout_marginBottom="@dimen/threedp"
+        android:textStyle="normal" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_weight=".02"/>
+
+    <TextView
+        android:id="@+id/tvAns"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/fortydp"
+        android:layout_weight="1.1"
+        android:gravity="center"
+        android:background="@drawable/ic_btn_view_six"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/black"
+        android:padding="@dimen/fivedp"
+        android:layout_marginBottom="@dimen/threedp"
+        android:textSize="18sp"
+        android:textStyle="normal" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:layout_weight=".01" />
+</LinearLayout>

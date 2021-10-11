@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.ActivitiesStaff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_arrow_back1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:paddingEnd="40dp"
+            android:text="@string/activities"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/fivedp"
+            android:layout_gravity="center_vertical"
+            android:tooltipText="@string/add_alerts"
+            android:background="@drawable/circle_white"
+            android:layout_weight=".5">
+            <ImageView
+                android:id="@+id/imgAddActivities"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".5"
+                android:background="@drawable/ic_add"
+                android:backgroundTint="@color/blue_800"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:minHeight="230dp"
+        android:orientation="vertical"
+        android:id="@+id/activitiesrecycleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:id="@+id/noavailable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/activity_img"/>
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/acti_title"
+            android:maxLines="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/alegreya_bold"
+            android:text="@string/no_activities_available"
+            android:textColor="@color/Blacklight"
+            android:textSize="18sp"/>
+    </LinearLayout>
+</LinearLayout>

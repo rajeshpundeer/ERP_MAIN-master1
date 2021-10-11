@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "484695577956",
+    "firebase_url": "https://btihamirpur.firebaseio.com",
+    "project_id": "btihamirpur",
+    "storage_bucket": "btihamirpur.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484695577956:android:b531c6c4981f8cbdf05671",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.bti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484695577956-f6crbbcrrgb3m879ieo6uvb5d3ohaoe0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.bti",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "484695577956-alaqk0gl44hfedvh2vn4cg4bujn5vl9h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-_z8HIKAFhDXZOrxLUwy6xl5cbdQF3Lg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484695577956-alaqk0gl44hfedvh2vn4cg4bujn5vl9h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

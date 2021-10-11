@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.school.iqdigit.Activity.AddTutorialActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_arrow_back1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingEnd="40dp"
+            android:text="@string/Add_Pdf"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/tendp"
+                android:fontFamily="@font/alegreya_sans"
+                android:text="@string/pdf_title"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:typeface="serif" />
+
+            <EditText
+                android:id="@+id/ed_book_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/background_7"
+                android:hint="@string/type_pdf_title_here"
+                android:padding="5dp"
+                android:textColor="@color/Grey_dark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/alegreya_sans"
+                android:maxLines="2"
+                android:text="@string/pdf_description"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:typeface="serif" />
+
+            <EditText
+                android:id="@+id/ed_lesson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/background_7"
+                android:gravity="start"
+                android:hint="@string/type_pdf_description_here"
+                android:maxLines="12"
+                android:minLines="5"
+                android:padding="5dp"
+                android:textColor="@color/Grey_dark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/alegreya_sans"
+                android:text="@string/create_pdf"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:typeface="serif" />
+
+            <CheckBox
+                android:id="@+id/chkPages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/background_7"
+                android:hint="@string/select_if_you_want_to_create_pdf"
+                android:padding="5dp"
+                android:textColor="@color/Grey_dark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/upload_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/background_8"
+                android:gravity="center"
+                android:text="@string/upload_pdf"
+                android:textColor="@color/White"
+                android:textSize="18sp"
+                android:typeface="serif" />
+
+            <RelativeLayout
+                android:id="@+id/rl_Images"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/ic_corner_view_one"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_no_available"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/lato_black"
+                    android:gravity="center"
+                    android:text="@string/tap_icon_to_add_images"
+                    android:textSize="16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleView_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/img_click_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity=""
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:tint="@android:color/white"
+                    app:backgroundTint="@color/colorPrimaryDark"
+                    app:elevation="0dp"
+                    app:fabSize="mini"
+                    app:rippleColor="@android:color/white"
+                    app:srcCompat="@drawable/ic_add_black_24dp" />
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/btnSubTutorial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/ic_btn_view_one"
+                android:text="@string/submit"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

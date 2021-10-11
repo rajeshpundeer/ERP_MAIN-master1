@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "455710070114",
+    "firebase_url": "https://trdav-9dbbf.firebaseio.com",
+    "project_id": "trdav-9dbbf",
+    "storage_bucket": "trdav-9dbbf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455710070114:android:79b5428b43a4f3b8d9c83b",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.pineroot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455710070114-aj6dsva8m68qc36fvdvvlsg8vh0nqeat.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.pineroot",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "455710070114-0gohe04uei60dpqvhg4r1b14ro5u6la1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-Hj-spy7ogl5MecTu7o3M_hhJiT7WDyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455710070114-0gohe04uei60dpqvhg4r1b14ro5u6la1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455710070114:android:94751fdeb4af2477d9c83b",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.trdav"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455710070114-4nm9gkkue31im438soecpl59ltbraiil.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.trdav",
+            "certificate_hash": "4dab2bdb2b8df9766133f055a40d9898a00e5cfa"
+          }
+        },
+        {
+          "client_id": "455710070114-icev39nj1a38sie8ofhrg8e5qrdnmtb8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.trdav",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "455710070114-0gohe04uei60dpqvhg4r1b14ro5u6la1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-Hj-spy7ogl5MecTu7o3M_hhJiT7WDyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455710070114-0gohe04uei60dpqvhg4r1b14ro5u6la1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

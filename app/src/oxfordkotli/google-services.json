@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "444774589865",
+    "project_id": "oxford-school-kotli",
+    "storage_bucket": "oxford-school-kotli.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444774589865:android:0c7e20d22ddc123dfd10b8",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.oxfordkotli"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444774589865-aalq948d8gk3uma5c368rsll7637r8ab.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.oxfordkotli",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "444774589865-cb8555cl0e631rrrgnula89i5uduvbqt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8ynmVmqRx7pSDYHMr1ZWBCDCqteqY994"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444774589865-cb8555cl0e631rrrgnula89i5uduvbqt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

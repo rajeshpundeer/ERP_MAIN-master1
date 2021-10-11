@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "638983382108",
+    "firebase_url": "https://aim-public-school.firebaseio.com",
+    "project_id": "aim-public-school",
+    "storage_bucket": "aim-public-school.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638983382108:android:ce299ff7044302321cb299",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.aim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638983382108-o2p0k9on5h9ff8b5u001p7neacltkv2e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.aim",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "638983382108-25mofvljhpd2h0nvbrjp62be26f9anke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6FWzmMOEd8h1ojFj2m5xntGjK7O9cxsk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638983382108-25mofvljhpd2h0nvbrjp62be26f9anke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

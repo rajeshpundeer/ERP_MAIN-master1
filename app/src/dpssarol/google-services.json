@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "785449317044",
+    "project_id": "dpssarol",
+    "storage_bucket": "dpssarol.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785449317044:android:ba076d0fd5287092b1dde1",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.dpssarol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785449317044-recaq3pnq5hhm2ohnmr2o3rnlvcejokj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.dpssarol",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "785449317044-ei16flhp01n4t48mhd6cd13muqqmr08f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuIKab8U-ESaN9_LIfIdTnRwU-h4mP5ac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785449317044-ei16flhp01n4t48mhd6cd13muqqmr08f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

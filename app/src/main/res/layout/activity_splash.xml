@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:background="@drawable/ic_back_splash"
+    tools:context=".Activity.Splash">
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/splash_image"
+        android:orientation="vertical"/>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/app_name_main"
+            android:textColor="@color/grey_80"
+            android:textSize="22sp"
+            tools:layout_editor_absoluteX="0dp" />
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="70dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|start">
+            <Button
+                android:id="@+id/button"
+                android:clickable="true"
+                android:elevation="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="-3dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/ic_btn_view_two"
+                android:drawablePadding="-50dp"
+                android:drawableStart="@drawable/ic_logo_student"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/student_login"
+                android:textColor="@color/grey_80"
+                android:textSize="18sp"
+                android:focusable="true" />
+            <Button
+                android:id="@+id/btnTeacherLogin"
+                android:clickable="true"
+                android:elevation="10dp"
+                android:layout_width="match_parent"
+                android:layout_marginStart="-3dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:drawablePadding="-50dp"
+                android:drawableStart="@drawable/ic_logo_teacher"
+                android:background="@drawable/ic_btn_view_two"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/teacher_login"
+                android:textColor="@color/grey_80"
+                android:textSize="18sp"
+                android:focusable="true" />
+            <Button
+                android:id="@+id/btnGuestLogin"
+                android:clickable="true"
+                android:elevation="10dp"
+                android:layout_width="match_parent"
+                android:layout_marginStart="-3dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/ic_btn_view_two"
+                android:drawablePadding="-50dp"
+                android:drawableStart="@drawable/ic_logo_guest"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="@string/guest_login"
+                android:textColor="@color/grey_80"
+                android:textSize="18sp"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/powby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center_horizontal"
+            android:text="@string/powered_by_iqwing_pvt_ltd"
+            android:textSize="16sp"
+            tools:ignore="RtlHardcoded,RtlSymmetry" />
+    </LinearLayout>
+
+</LinearLayout>

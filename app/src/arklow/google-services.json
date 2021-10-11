@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "562869298177",
+    "firebase_url": "https://arklow-42e6a.firebaseio.com",
+    "project_id": "arklow-42e6a",
+    "storage_bucket": "arklow-42e6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562869298177:android:7831d9bf9fb441d2190c00",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.arklow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562869298177-a66mtqjavdr63dpto1gge8ggeobijfm3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.arklow",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "562869298177-72a5juf2paclmi1bj09cj4fkgevr16g5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKiQuTaWi3CqgCdspn-DuGDABLnzVso0o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562869298177-72a5juf2paclmi1bj09cj4fkgevr16g5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

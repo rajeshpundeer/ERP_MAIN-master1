@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "307930078293",
+    "project_id": "palampur-public-school",
+    "storage_bucket": "palampur-public-school.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307930078293:android:34c9415f08a6f0815dc8dc",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.pps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307930078293-u5sm1fd3magf4k3hqi3jo6190t46u775.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.pps",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "307930078293-3jlevhupivvni14tveip5a006eru2pco.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLnoo7YDT6ylQqJaKc6wpFY1bnVOBN_pQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307930078293-3jlevhupivvni14tveip5a006eru2pco.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

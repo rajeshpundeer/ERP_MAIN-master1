@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "907717893856",
+    "firebase_url": "https://goldwin-f4ed2.firebaseio.com",
+    "project_id": "goldwin-f4ed2",
+    "storage_bucket": "goldwin-f4ed2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907717893856:android:afe914a4534be868fffa85",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.goldwin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "907717893856-hh6lgjvriqjo9hg1k14u9c6i16rcilvs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.goldwin",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "907717893856-0echp5pkhpdc759b2i5p7ht642qejcnk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCid-hxt8zuzMlz0kpp2OpvMlnFdQ69Txc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "907717893856-0echp5pkhpdc759b2i5p7ht642qejcnk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

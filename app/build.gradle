@@ -1,0 +1,593 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.4, 0.99.99]'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+
+android {
+   /* signingConfigs {
+        config {
+            storeFile file('C:\\Users\\ilikewebsite\\Desktop\\Projects\\ERP Solution\\Magnet\\magnetkey.jks')
+            keyAlias = 'school'
+            storePassword 'school'
+            keyPassword 'school'
+        }
+    }*/
+    packagingOptions {
+        exclude 'com/itextpdf/io/font/cmap_info.txt'
+        exclude 'com/itextpdf/io/font/cmap/*'
+    }
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "com.school.iqdigit"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 72
+        versionName "1.72"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        manifestPlaceholders = [
+                onesignal_app_id  : '121a6811-6c54-446b-94fd-5f81ee604c1b',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE'
+        ]
+    }
+    buildTypes {
+        debug {
+        }
+    }
+    // Specifies one flavor dimension.
+    flavorDimensions "version"
+    productFlavors {
+        shsd {
+            dimension "version"
+            applicationIdSuffix ".shsd"
+            versionNameSuffix "-shsd"
+            resValue "string", "app_name", "shsd"
+            buildConfigField("String", "BASE_UR", "\"https://shsd.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Sacred Heart Sr. Sec. School Sidhpur"
+            resValue "string", "tagline", ""
+        }
+        magnet {
+            dimension "version"
+            applicationIdSuffix ".magnet"
+            versionNameSuffix "-magnet"
+            resValue "string", "app_name", "The Magnet"
+            buildConfigField("String", "BASE_UR", "\"https://themagnet.iqdigit.com/\"")
+            resValue "string", "app_name_main", "The Magnet Public School Hamirpur"
+            resValue "string", "tagline", ""
+        }
+        apsbhota {
+            dimension "version"
+            applicationIdSuffix ".apsbhota"
+            versionNameSuffix "-apsbhota"
+            resValue "string", "app_name", "APS Bhota"
+            buildConfigField("String", "BASE_UR", "\"https://apsbhota.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Aryan Public Sr. Sec School Bhota"
+            resValue "string", "tagline", "  "
+        }
+        davmnd {
+            dimension "version"
+            applicationIdSuffix ".davmnd"
+            versionNameSuffix "-davmnd"
+            resValue "string", "app_name", "DAV Mandi"
+            buildConfigField("String", "BASE_UR", "\"https://davmnd.iqdigit.com/\"")
+            resValue "string", "app_name_main", "DAV CENTENARY PUBLIC SCHOOL MANDI"
+            resValue "string", "tagline", "  "
+        }
+        davnerchowk {
+            dimension "version"
+            applicationIdSuffix ".davnerchowk"
+            versionNameSuffix "-davnerchowk"
+            resValue "string", "app_name", "DAV NERCHOWK"
+            buildConfigField("String", "BASE_UR", "\"https://davnerchowk.iqdigit.com/\"")
+            resValue "string", "app_name_main", "DAV PUBLIC SCHOOL NER-CHOWK"
+            resValue "string", "tagline", "  "
+        }
+        bti {
+            dimension "version"
+            applicationIdSuffix ".bti"
+            versionNameSuffix "-bti"
+            resValue "string", "app_name", "BTI Wellness Hamirpur"
+            buildConfigField("String", "BASE_UR", "\"https:/bti.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Beauty Therapy Institute & Salon (BTI) Hamirpur"
+            resValue "string", "tagline", "Beauty Therapy Institute & Salon (BTI) Hamirpur"
+        }
+        trdav {
+            dimension "version"
+            applicationIdSuffix ".trdav"
+            versionNameSuffix "-trdav"
+            resValue "string", "app_name", "TR DAV KANGOO"
+            buildConfigField("String", "BASE_UR", "\"https://trdav.iqdigit.com/\"")
+            resValue "string", "app_name_main", "TR DAV PUBLIC SR. SEC. SCHOOL, KANGOO"
+            resValue "string", "tagline", ""
+        }
+        davgyn {
+            dimension "version"
+            applicationIdSuffix ".davgyn"
+            versionNameSuffix "-davgyn"
+            resValue "string", "app_name", "DAV Greyoh"
+            buildConfigField("String", "BASE_UR", "\"https://davgyn.iqdigit.com/\"")
+            resValue "string", "app_name_main", "DAV SR. SEC. PUBLIC SCHOOL, Greyoh"
+            resValue "string", "tagline", ""
+        }
+        davbmn {
+            dimension "version"
+            applicationIdSuffix ".davbmn"
+            versionNameSuffix "-davbmn"
+            resValue "string", "app_name", "DAV Barmana"
+            buildConfigField("String", "BASE_UR", "\"https://davbmn.iqdigit.com/\"")
+            resValue "string", "app_name_main", "DAV SR. SEC. PUBLIC SCHOOL, Barmana"
+            resValue "string", "tagline", ""
+        }
+        davhmr {
+            dimension "version"
+            applicationIdSuffix ".davhmr"
+            versionNameSuffix "-davhmr"
+            resValue "string", "app_name", "DAV Hamirpur"
+            buildConfigField("String", "BASE_UR", "\"https://davhmr.iqdigit.com/\"")
+            resValue "string", "app_name_main", "DAV PUBLIC SCHOOL, Hamirpur"
+            resValue "string", "tagline", ""
+        }
+        pinecrusthmr {
+            dimension "version"
+            applicationIdSuffix ".pinecrusthmr"
+            versionNameSuffix "-pinecrusthmr"
+            resValue "string", "app_name", "PINECREST PUBLIC SCHOOL, HAMIRPUR"
+            buildConfigField("String", "BASE_UR", "\"https://pinecrest.iqdigit.com/\"")
+            resValue "string", "app_name_main", "PINECREST PUBLIC SCHOOL, HAMIRPUR"
+            resValue "string", "tagline", ""
+        }
+        pineroot {
+            dimension "version"
+            applicationIdSuffix ".pineroot"
+            versionNameSuffix "-pineroot"
+            resValue "string", "app_name", "PINEROOT PUBLIC SCHOOL, HAMIRPUR"
+            buildConfigField("String", "BASE_UR", "\"https://pineroot.iqdigit.com/\"")
+            resValue "string", "app_name_main", "PINEROOT PUBLIC SCHOOL, HAMIRPUR"
+            resValue "string", "tagline", ""
+        }
+        saraswati {
+            dimension "version"
+            applicationIdSuffix ".saraswati"
+            versionNameSuffix "-saraswati"
+            resValue "string", "app_name", "Lambloo Saraswati Public School"
+            buildConfigField("String", "BASE_UR", "\"https:/spsl.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Saraswati Public School, Lambloo "
+            resValue "string", "tagline", ""
+        }
+        almighty {
+            dimension "version"
+            applicationIdSuffix ".almighty"
+            versionNameSuffix "-almighty"
+            resValue "string", "app_name", "Almighty School"
+            buildConfigField("String", "BASE_UR", "\"https://almighty.iqdigit.com/\"")
+            resValue "string", "app_name_main", " Almighty Public School, Hamirpur"
+            resValue "string", "tagline", ""
+        }
+        demo {
+            dimension "version"
+            applicationIdSuffix ".demo"
+            versionNameSuffix "-demo"
+            resValue "string", "app_name", "IQdigit"
+            buildConfigField("String", "BASE_UR", "\"https://iqdigit.iqwing.live/\"")
+            resValue "string", "app_name_main", "IQdigit"
+            resValue "string", "tagline", ""
+        }
+        dpskhouda {
+            dimension "version"
+            applicationIdSuffix ".dpskhouda"
+            versionNameSuffix "-dpskhouda"
+            resValue "string", "app_name", "dps khouda"
+            buildConfigField("String", "BASE_UR", "\"https://dpskda.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Divya PUBLIC SR. SEC. SCHOOL, Khouda"
+            resValue "string", "tagline", ""
+        }
+        ivs {
+            dimension "version"
+            applicationIdSuffix ".ivs"
+            versionNameSuffix "-ivs"
+            resValue "string", "app_name", "Indus valley School Anu Khurd"
+            buildConfigField("String", "BASE_UR", "\"https:/ivshmr.iqdigit.com/\"")
+            resValue "string", "app_name_main", "INDUS VALLEY SCHOOL ANU KHURD, HAMIRPUR"
+            resValue "string", "tagline", ""
+        }
+        bpssamote {
+            dimension "version"
+            applicationIdSuffix ".bpssamote"
+            versionNameSuffix "-bpssamote"
+            resValue "string", "app_name", "Bhartiya Public School Samote"
+            buildConfigField("String", "BASE_UR", "\"https:/bpssmt.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Bhartiya Public School Samote,Distt Chamba(H.P.)"
+            resValue "string", "tagline", ""
+        }
+        gpskotli {
+            dimension "version"
+            applicationIdSuffix ".gpskotli"
+            versionNameSuffix "-gpskotli"
+            resValue "string", "app_name", "Gurukul Public Sr. Sec. School Kotli"
+            buildConfigField("String", "BASE_UR", "\"https:/gpskotli.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Gurukul Public Sr. Sec. School Kotli, Distt Mandi-HP"
+            resValue "string", "tagline", ""
+        }
+        apsswg {
+            dimension "version"
+            applicationIdSuffix ".apsswg"
+            versionNameSuffix "-apsswg"
+            resValue "string", "app_name", "Adarsh Public School,Swarghat"
+            buildConfigField("String", "BASE_UR", "\"https://apsswg.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Adarsh Public School,Swarghat"
+            resValue "string", "tagline", ""
+        }
+        sdps {
+            dimension "version"
+            applicationIdSuffix ".sdps"
+            versionNameSuffix "-sdps"
+            resValue "string", "app_name", "S D Public School,Hamirpur"
+            buildConfigField("String", "BASE_UR", "\"https://sdps.iqdigit.com/\"")
+            resValue "string", "app_name_main", "S D Public School,Hamirpur"
+            resValue "string", "tagline", ""
+        }
+        navbharat {
+            dimension "version"
+            applicationIdSuffix ".navbharat"
+            versionNameSuffix "-navbharat"
+            resValue "string", "app_name", "Nav Bharat Public School,Bijhri"
+            buildConfigField("String", "BASE_UR", "\"https://navbharat.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Nav Bharat Public School,Bijhri"
+            resValue "string", "tagline", ""
+        }
+        kkey {
+            dimension "version"
+            applicationIdSuffix ".kkey"
+            versionNameSuffix "-kkey"
+            resValue "string", "app_name", "K Key Public School"
+            buildConfigField("String", "BASE_UR", "\"https://kkey.iqdigit.com/\"")
+            resValue "string", "app_name_main", "K Key Public Sr. Sec. School,Hamirpur"
+            resValue "string", "tagline", ""
+        }
+        rigveda {
+            dimension "version"
+            applicationIdSuffix ".rigveda"
+            versionNameSuffix "-rigveda"
+            resValue "string", "app_name", "Rigveda Public School"
+            buildConfigField("String", "BASE_UR", "\"https://rigveda.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Rigveda Public School,Hamirpur"
+            resValue "string", "tagline", ""
+        }
+        shivshakti {
+            dimension "version"
+            applicationIdSuffix ".shivshakti"
+            versionNameSuffix "-shivshakti"
+            resValue "string", "app_name", "Shiv Shakti Convent School, Kasaroo"
+            buildConfigField("String", "BASE_UR", "\"https://shivshakti.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Shiv Shakti Convent School, Kasaroo"
+            resValue "string", "tagline", ""
+        }
+        chanakya {
+            dimension "version"
+            applicationIdSuffix ".chanakya"
+            versionNameSuffix "-chanakya"
+            resValue "string", "app_name", "Chanakya The Guru, Hamirpur"
+            buildConfigField("String", "BASE_UR", "\"https://chanakya.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Chanakya The Guru, Hamirpur"
+            resValue "string", "tagline", ""
+        }
+        davlathi {
+            dimension "version"
+            applicationIdSuffix ".davlathi"
+            versionNameSuffix "-davlathi"
+            resValue "string", "app_name", "DAV Lathiani"
+            buildConfigField("String", "BASE_UR", "\"https://davlathi.iqdigit.com/\"")
+            resValue "string", "app_name_main", "DAV SR. SEC. PUBLIC SCHOOL, Lathiani, Una"
+            resValue "string", "tagline", ""
+        }
+        ohel {
+            dimension "version"
+            applicationIdSuffix ".ohel"
+            versionNameSuffix "-ohel"
+            resValue "string", "app_name", "OHEL Aptitude"
+            buildConfigField("String", "BASE_UR", "\"https://ohel.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Ohel International School Kuthera Jolplakhin Tehshil Ghumarwin District Bilaspur (H.P.) 174026"
+            resValue "string", "tagline", ""
+        }
+        gnps {
+            dimension "version"
+            applicationIdSuffix ".gnps"
+            versionNameSuffix "-gnps"
+            resValue "string", "app_name", "Guru Nanak Public School,Dalhousie"
+            buildConfigField("String", "BASE_UR", "\"https://gnps.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Guru Nanak Public School,Dalhousie"
+            resValue "string", "tagline", ""
+        }
+        davtn {
+            dimension "version"
+            applicationIdSuffix ".davtn"
+            versionNameSuffix "-davtn"
+            resValue "string", "app_name", "DAV Tauni Devi"
+            buildConfigField("String", "BASE_UR", "\"https://davtd.iqdigit.com/\"")
+            resValue "string", "app_name_main", "DAV PUBLIC SR. SEC. SCHOOL Darkoti(Tauni Devi)"
+            resValue "string", "tagline", ""
+        }
+        sscsnp {
+            dimension "version"
+            applicationIdSuffix ".sscsnp"
+            versionNameSuffix "-sscsnp"
+            resValue "string", "app_name", "Sacred Soul Cambridge School"
+            buildConfigField("String", "BASE_UR", "\"https://sscsnp.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Sacred Soul Cambridge School Vill. Road (Aghar-Gangath Link Road)"
+            resValue "string", "tagline", ""
+        }
+        aim {
+            dimension "version"
+            applicationIdSuffix ".aim"
+            versionNameSuffix "-aim"
+            resValue "string", "app_name", "Aim Public Sr. Sec. School"
+            buildConfigField("String", "BASE_UR", "\"https://aim.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Aim Public Sr. Sec. School, Hamirpur"
+            resValue "string", "tagline", ""
+        }
+        himadarsh {
+            dimension "version"
+            applicationIdSuffix ".himadarsh"
+            versionNameSuffix "-himadarsh"
+            resValue "string", "app_name", "Him Adarsh Public School,Mamligh"
+            buildConfigField("String", "BASE_UR", "\"https://hapsm.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Him Adarsh Public School,Mamligh"
+            resValue "string", "tagline", ""
+        }
+        arklow {
+            dimension "version"
+            applicationIdSuffix ".arklow"
+            versionNameSuffix "-arklow"
+            resValue "string", "app_name", "Arklow Play School"
+            buildConfigField("String", "BASE_UR", "\"https://Arklow.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Arklow Play School"
+            resValue "string", "tagline", ""
+        }
+        davbankhandi {
+            dimension "version"
+            applicationIdSuffix ".davbankhandi"
+            versionNameSuffix "-davbankhandi"
+            resValue "string", "app_name", "DAV  BANKHANDI"
+            buildConfigField("String", "BASE_UR", "\"https://Davbkd.iqdigit.com/\"")
+            resValue "string", "app_name_main", "DAV  BANKHANDI"
+            resValue "string", "tagline", ""
+        }
+        blcentral {
+            dimension "version"
+            applicationIdSuffix ".blcentral"
+            versionNameSuffix "-blcentral"
+            resValue "string", "app_name", "B.L. CENTRAL PUBLIC SEN. SEC. SCHOOL"
+            buildConfigField("String", "BASE_UR", "\"https://Blcs.iqdigit.com/\"")
+            resValue "string", "app_name_main", "B.L. CENTRAL PUBLIC SEN. SEC. SCHOOL"
+            resValue "string", "tagline", ""
+        }
+        navyug {
+            dimension "version"
+            applicationIdSuffix ".navyug"
+            versionNameSuffix "-navyug"
+            resValue "string", "app_name", "Navyug Chetna Public School"
+            buildConfigField("String", "BASE_UR", "\"https://ncps.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Navyug Chetna Public School"
+            resValue "string", "tagline", ""
+        }
+        goldwin {
+            dimension "version"
+            applicationIdSuffix ".goldwin"
+            versionNameSuffix "-goldwin"
+            resValue "string", "app_name", "Goldwin International School"
+            buildConfigField("String", "BASE_UR", "\"https://goldwin.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Goldwin International School"
+            resValue "string", "tagline", ""
+        }
+        iitians {
+            dimension "version"
+            applicationIdSuffix ".iitians"
+            versionNameSuffix "-iitians"
+            resValue "string", "app_name", "IITians CLASSES HAMIRPUR(H.P.)"
+            buildConfigField("String", "BASE_UR", "\"https://iitians.iqdigit.com/\"")
+            resValue "string", "app_name_main", "IITians CLASSES HAMIRPUR(H.P.)"
+            resValue "string", "tagline", ""
+        }
+        davblp {
+            dimension "version"
+            applicationIdSuffix ".davblp"
+            versionNameSuffix "-davblp"
+            resValue "string", "app_name", "DAV Bilaspur"
+            buildConfigField("String", "BASE_UR", "\"https://Davblp.iqdigit.com/\"")
+            resValue "string", "app_name_main", "DAV SR. SEC. PUBLIC SCHOOL, Bilaspur(H.P.)"
+            resValue "string", "tagline", ""
+        }
+        pacfc {
+            dimension "version"
+            applicationIdSuffix ".pacfc"
+            versionNameSuffix "-pacfc"
+            resValue "string", "app_name", "PACFC CLASSES"
+            buildConfigField("String", "BASE_UR", "\"https://Pacfc.iqdigit.com/\"")
+            resValue "string", "app_name_main", "PACFC CLASSES"
+            resValue "string", "tagline", ""
+        }
+        dpssarol {
+            dimension "version"
+            applicationIdSuffix ".dpssarol"
+            versionNameSuffix "-dpssarol"
+            resValue "string", "app_name", "DPS Sarol Chamba"
+            buildConfigField("String", "BASE_UR", "\"https://dpssarol.iqdigit.com/\"")
+            resValue "string", "app_name_main", "DPS Sarol Chamba"
+            resValue "string", "tagline", ""
+        }
+        newgurukul {
+            dimension "version"
+            applicationIdSuffix ".newgurukul"
+            versionNameSuffix "-newgurukul"
+            resValue "string", "app_name", "New Gurukul School"
+            buildConfigField("String", "BASE_UR", "\"http://newgurukul.iqdigit.com/\"")
+            resValue "string", "app_name_main", "New Gurukul School"
+            resValue "string", "tagline", ""
+        }
+        gurukulhmr {
+            dimension "version"
+            applicationIdSuffix ".gurukulhmr"
+            versionNameSuffix "-gurukulhmr"
+            resValue "string", "app_name", "Gurukul School"
+            buildConfigField("String", "BASE_UR", "\"https://gurukulhmr.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Gurukul School"
+            resValue "string", "tagline", ""
+        }
+        pps {
+            dimension "version"
+            applicationIdSuffix ".pps"
+            versionNameSuffix "-pps"
+            resValue "string", "app_name", "PALAMPUR PUBLIC SCHOOL"
+            buildConfigField("String", "BASE_UR", "\"https://pps.iqdigit.com/\"")
+            resValue "string", "app_name_main", "PALAMPUR PUBLIC SCHOOL"
+            resValue "string", "tagline", ""
+        }
+        navjyoti {
+            dimension "version"
+            applicationIdSuffix ".navjyoti"
+            versionNameSuffix "-navjyoti"
+            resValue "string", "app_name", "NAVJYOTI PUBLIC SCHOOL SARKHAGHAT"
+            buildConfigField("String", "BASE_UR", "\"https://navjyoti.iqdigit.com/\"")
+            resValue "string", "app_name_main", "NAVJYOTI PUBLIC SCHOOL SARKHAGHAT"
+            resValue "string", "tagline", ""
+        }
+        tgss {
+            dimension "version"
+            applicationIdSuffix ".tgss"
+            versionNameSuffix "-tgss"
+            resValue "string", "app_name", "The Good Shepherd School Solan"
+            buildConfigField("String", "BASE_UR", "\"https://tgss.iqdigit.com/\"")
+            resValue "string", "app_name_main", "The Good Shepherd School Solan"
+            resValue "string", "tagline", ""
+        }
+        srb {
+            dimension "version"
+            applicationIdSuffix ".srb"
+            versionNameSuffix "-srb"
+            resValue "string", "app_name", "SUNRISE SCHOOL BHAMBLA"
+            buildConfigField("String", "BASE_UR", "\"https://srb.iqdigit.com/\"")
+            resValue "string", "app_name_main", "SUNRISE SCHOOL BHAMBLA"
+            resValue "string", "tagline", ""
+        }
+        gavsolan {
+            dimension "version"
+            applicationIdSuffix ".gavsolan"
+            versionNameSuffix "-gavsolan"
+            resValue "string", "app_name", "GEETA ADARSH VIDYALAYA"
+            buildConfigField("String", "BASE_UR", "\"https://gavsolan.iqdigit.com/\"")
+            resValue "string", "app_name_main", "GEETA ADARSH VIDYALAYA"
+            resValue "string", "tagline", ""
+        }
+        bgpshmr {
+            dimension "version"
+            applicationIdSuffix ".bgpshmr"
+            versionNameSuffix "-bgpshmr"
+            resValue "string", "app_name", "Bal Gurukul Public School"
+            buildConfigField("String", "BASE_UR", "\"https://bgpshmr.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Bal Gurukul Public School"
+            resValue "string", "tagline", ""
+        }
+        oxfordkotli {
+            dimension "version"
+            applicationIdSuffix ".oxfordkotli"
+            versionNameSuffix "-oxfordkotli"
+            resValue "string", "app_name", "Oxford School Kotli"
+            buildConfigField("String", "BASE_UR", "\"http://oxfordkotli.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Oxford School Kotli"
+            resValue "string", "tagline", ""
+        }
+        shsdalhousie {
+            dimension "version"
+            applicationIdSuffix ".shsdalhousie"
+            versionNameSuffix "-shsdalhousie"
+            resValue "string", "app_name", "Sacred Heart Dalhousie"
+            buildConfigField("String", "BASE_UR", "\"http://shsdalhousie.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Sacred Heart Dalhousie"
+            resValue "string", "tagline", ""
+        }
+        cismandi {
+            dimension "version"
+            applicationIdSuffix ".cismandi"
+            versionNameSuffix "-cismandi"
+            resValue "string", "app_name", "CIS Mandi"
+            buildConfigField("String", "BASE_UR", "\"https://cambridgemandi.iqdigit.com/\"")
+            resValue "string", "app_name_main", "CIS Mandi"
+            resValue "string", "tagline", ""
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+//
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    //   implementation 'com.jakewharton:butterknife:6.1.0'
+    implementation 'com.android.volley:volley:1.1.1'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:multidex:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.github.jkwiecien:EasyImage:2.0.4'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.chaos.view:pinview:1.3.2'
+
+    implementation 'id.zelory:compressor:2.1.0'
+    implementation 'com.github.arcadefire:nice-spinner:1.4.3'
+    implementation 'com.github.msayan:tutorial-view:v1.0.10'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.google.firebase:firebase-messaging:20.1.0'
+    implementation 'com.onesignal:OneSignal:3.12.4'
+    implementation 'com.github.smarteist:autoimageslider:1.3.2'
+    implementation 'com.dc.easyadapter:easyadapter:2.0.3'
+    implementation 'sun.bob:mcalendarview:1.0.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+    implementation 'com.nightonke:jellytogglebutton:1.0.2'
+    implementation 'com.github.sundeepk:compact-calendar-view:3.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.github.instacart.truetime-android:library:3.4'
+    implementation 'com.itextpdf:itextg:5.5.10'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(":PGSDKVR4")
+    implementation 'com.google.firebase:firebase-config:19.1.0'
+    implementation 'com.google.android.play:core:1.9.1'
+    implementation 'com.android.support:design:30.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'es.voghdev.pdfviewpager:library:1.1.2'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+    implementation 'com.google.firebase:firebase-analytics:17.4.4'
+    implementation 'com.google.firebase:firebase-crashlytics:17.1.1'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+}
+
+apply plugin: 'com.google.firebase.crashlytics'
+

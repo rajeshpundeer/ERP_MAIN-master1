@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/maintenance_image"
+    tools:context="com.school.iqdigit.Activity.MaintenanceActivity">
+
+    <TextView
+        android:id="@+id/tvTitleMaintenance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/maintenance"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/fortydp"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/twentydp"
+        android:layout_above="@+id/tvMaintext"
+        android:textColor="@color/indigo_900"/>
+    <TextView
+        android:id="@+id/tvMaintext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/indigo_800"
+        android:textSize="@dimen/twentydp"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/fortydp" />
+</RelativeLayout>

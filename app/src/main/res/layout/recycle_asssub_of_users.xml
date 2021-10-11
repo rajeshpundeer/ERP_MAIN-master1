@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp">
+
+         <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/download_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_4" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/assSubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="PRIMARY"
+                android:theme="@style/Button.Primary" />
+        </RelativeLayout>
+
+
+         <TextView
+             android:id="@+id/ass_title"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:maxLines="1"
+             android:layout_marginStart="10dp"
+             android:textAppearance="@style/TextAppearance.AppCompat.Title"
+             android:textColor="@color/Grey_dark" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/ass_deription"
+                android:layout_marginStart="10dp"
+                android:paddingStart="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/grey_80"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/ass_download"
+                android:layout_gravity="center_vertical"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@color/grey_40"
+                app:srcCompat="@drawable/ic_file_download" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+<!--    <android.support.v7.widget.CardView-->
+<!--        android:id="@+id/cardview"-->
+<!--        app:cardCornerRadius="5dp"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <LinearLayout-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <LinearLayout-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+<!--                <TextView-->
+<!--                    android:layout_weight="0.50"-->
+<!--                    android:gravity="right"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/subjects"-->
+<!--                    android:textColor="@color/Black"-->
+<!--                    android:textSize="20sp"/>-->
+<!--                <TextView-->
+<!--                    android:layout_weight="0.50"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:id="@+id/assSubject"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/subject"-->
+<!--                    android:textColor="@color/Grey_dark"-->
+<!--                    android:textSize="20sp"/>-->
+<!--            </LinearLayout>-->
+<!--            <LinearLayout-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0.5dp"-->
+<!--                android:background="@color/Grey_dark"/>-->
+<!--           <LinearLayout-->
+<!--               android:orientation="horizontal"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content">-->
+
+<!--               <LinearLayout-->
+<!--                   android:layout_weight="0.50"-->
+<!--                   android:orientation="vertical"-->
+<!--                   android:layout_width="match_parent"-->
+<!--                   android:layout_height="wrap_content">-->
+<!--                   <LinearLayout-->
+<!--                       android:orientation="horizontal"-->
+<!--                       android:layout_width="match_parent"-->
+<!--                       android:layout_height="wrap_content">-->
+
+<!--                       <TextView-->
+<!--                           android:id="@+id/ass_title"-->
+<!--                           android:layout_gravity="center"-->
+<!--                           android:layout_margin="5dp"-->
+<!--                           android:layout_width="wrap_content"-->
+<!--                           android:layout_height="wrap_content"-->
+<!--                           android:textStyle="bold"-->
+<!--                           android:text="This is demo title"-->
+<!--                           android:textColor="@color/Grey_dark"-->
+<!--                           android:textSize="20sp"/>-->
+<!--                   </LinearLayout>-->
+<!--                   <LinearLayout-->
+<!--                       android:orientation="horizontal"-->
+<!--                       android:layout_width="match_parent"-->
+<!--                       android:layout_height="wrap_content">-->
+
+<!--                       <TextView-->
+<!--                           android:id="@+id/ass_deription"-->
+<!--                           android:layout_width="wrap_content"-->
+<!--                           android:layout_height="wrap_content"-->
+<!--                           android:layout_gravity="center"-->
+<!--                           android:layout_margin="5dp"-->
+<!--                           android:text="This is demo Description for this subject homework. Please do it and submit."-->
+<!--                           android:textColor="@color/Grey_dark"-->
+<!--                           android:textSize="20sp" />-->
+<!--                   </LinearLayout>-->
+<!--                   <LinearLayout-->
+<!--                       android:layout_margin="10dp"-->
+<!--                       android:orientation="horizontal"-->
+<!--                       android:layout_width="match_parent"-->
+<!--                       android:layout_height="wrap_content">-->
+<!--                       <Button-->
+<!--                           android:id="@+id/ass_download"-->
+<!--                           android:layout_weight="0.50"-->
+<!--                           android:layout_width="wrap_content"-->
+<!--                           android:layout_height="35dp"-->
+<!--                           android:paddingStart="10dp"-->
+<!--                           android:paddingEnd="10dp"-->
+<!--                           android:background="@drawable/background_2"-->
+<!--                           android:text="Download"-->
+<!--                           android:textSize="15dp"/>-->
+
+<!--                   </LinearLayout>-->
+<!--               </LinearLayout>-->
+<!--               <LinearLayout-->
+<!--                   android:layout_weight="0.50"-->
+<!--                   android:layout_width="match_parent"-->
+<!--                   android:layout_height="wrap_content">-->
+<!--                   <ImageView-->
+<!--                       android:id="@+id/download_image"-->
+<!--                       android:layout_width="match_parent"-->
+<!--                       android:layout_height="wrap_content" />-->
+<!--               </LinearLayout>-->
+
+<!--           </LinearLayout>-->
+
+
+<!--        </LinearLayout>-->
+
+<!--    </android.support.v7.widget.CardView>-->
+
+</LinearLayout>

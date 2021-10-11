@@ -1,0 +1,283 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.school.iqdigit.Activity.AttendanceStaff1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backbtn1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_arrow_back1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingEnd="40dp"
+            android:text="@string/attendence"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/navigationTimetable"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/navigation_ragular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:text="@string/ragular"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/view_ragular"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="30dp"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/navigation_live_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:text="@string/live_class"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/view_live_class"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="30dp"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llRagular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btnSubmitAtnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_btn_view_one"
+            android:layout_margin="@dimen/fivedp"
+            android:text="@string/Submit"
+            android:layout_below="@+id/lltoolbar"
+            android:textSize="18sp"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="@color/White"
+            />
+        <LinearLayout
+            android:id="@+id/timetableheadlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_marginTop="@dimen/fivedp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/White"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fortydp"
+                android:weightSum="2.41"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.4"
+                    android:layout_height="@dimen/fortydp"
+                    android:text="@string/student_name"
+                    android:textColor="@color/grey_80"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:background="@drawable/ic_corner_view_one"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:padding="@dimen/fivedp"
+                    android:textStyle="bold"
+                    android:typeface="serif"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/White"
+                    android:layout_weight=".01"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/fortydp"
+                    android:text="@string/attendence"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textColor="@color/grey_80"
+                    android:background="@drawable/ic_corner_view_one"
+                    android:textSize="20sp"
+                    android:padding="@dimen/fivedp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:typeface="serif"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/White"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:minHeight="150dp"
+            android:id="@+id/rvAttendance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/White"
+            android:layout_height="1dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_live"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/liveattenHead"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fortydp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_weight=".02"/>
+
+            <TextView
+                android:id="@+id/tvStudentName"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/fortydp"
+                android:layout_weight="2.03"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:text="@string/student_name"
+                android:background="@drawable/ic_btn_view_three"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_marginBottom="@dimen/threedp"
+                android:textStyle="normal"
+                android:typeface="serif" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_weight=".02"/>
+
+            <TextView
+                android:id="@+id/tvClass"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/fortydp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/classes"
+                android:background="@drawable/ic_btn_view_three"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="@dimen/threedp"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+                android:layout_weight=".01" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_liveattendance"
+            android:minWidth="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fivedp"/>
+        <LinearLayout
+            android:id="@+id/noattendance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="101dp"
+                android:layout_height="102dp"
+                android:layout_gravity="center"
+                android:src="@drawable/activity_img" />
+
+            <TextView
+                android:id="@+id/acti_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/alegreya_bold"
+                android:maxLines="2"
+                android:text="@string/no_attendance_available"
+                android:textColor="@color/Blacklight"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

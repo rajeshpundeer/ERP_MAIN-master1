@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "586019029410",
+    "firebase_url": "https://chankya-74e21.firebaseio.com",
+    "project_id": "chankya-74e21",
+    "storage_bucket": "chankya-74e21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:586019029410:android:af2868f5f85896b37c72fb",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.chanakya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "586019029410-fe2q56s5upbmc3rsubuncbm0d218jm1t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.chanakya",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "586019029410-e4p91h209bv0s586mqlj3tp4vdic9nrp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpNzdKrhp29FR8pCkxpywTGi9yLS9UjEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "586019029410-e4p91h209bv0s586mqlj3tp4vdic9nrp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

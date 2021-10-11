@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/fivedp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_mcqtest"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/ic_btn_view_three"
+        android:textColor="@color/grey_80"
+        android:textSize="@dimen/sixteensp"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingTop="@dimen/fivedp"
+        android:paddingBottom="@dimen/fivedp"/>
+</LinearLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "771601369293",
+    "firebase_url": "https://sarawati-95575.firebaseio.com",
+    "project_id": "sarawati-95575",
+    "storage_bucket": "sarawati-95575.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771601369293:android:7ff2a870b1225e393d8184",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.saraswati"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771601369293-bjbs1hk7ej9tutsesaottejuq4v4bda8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.saraswati",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "771601369293-o3f4ps9sidcmin12ebvtn8j2c73jf89h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKYY0MHCnqLqL0lc6xAHWy-Mn3qY4X1G4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771601369293-o3f4ps9sidcmin12ebvtn8j2c73jf89h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

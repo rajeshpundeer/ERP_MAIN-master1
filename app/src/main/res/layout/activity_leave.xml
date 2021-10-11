@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homeback"
+    android:orientation="vertical"
+    android:backgroundTintMode="add"
+    android:backgroundTint="@color/amber_900"
+    tools:context=".Activity.AssignmentStaff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgbackbtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_arrow_back1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingEnd="40dp"
+            android:text="@string/apply_leave"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/alegreya_sans"
+                    android:text="@string/date"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:typeface="serif" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:gravity="start"
+                android:layout_weight="0.50"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_margin="10dp"
+                    android:id="@+id/btnLeaveFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alegreya_bold"
+                    android:background="@drawable/button_shape7"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="18sp"
+                    android:text="@string/from"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="end"
+                android:layout_weight="0.50"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_margin="10dp"
+                    android:id="@+id/btnLeaveTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alegreya_bold"
+                    android:background="@drawable/button_shape7"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="18sp"
+                    android:text="@string/to"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/alegreya_sans"
+                android:maxLines="2"
+                android:text="@string/reason"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:typeface="serif" />
+
+            <EditText
+                android:id="@+id/edReason"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/background_7"
+                android:gravity="start"
+                android:hint="@string/type_description_here"
+                android:maxLines="5"
+                android:padding="5dp"
+                android:textColor="@color/Grey_dark"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnSubmitLeave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="@dimen/tendp"
+                android:layout_marginRight="@dimen/tendp"
+                android:layout_marginBottom="@dimen/tendp"
+                android:background="@drawable/button_shape1"
+                android:backgroundTint="@color/deep_orange_500"
+                android:gravity="center"
+                android:text="@string/submit"
+                android:textColor="@color/White"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+
+    </ScrollView>-->
+</LinearLayout>

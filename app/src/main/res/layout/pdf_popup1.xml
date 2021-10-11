@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="240dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/img_cancel_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_gravity="right"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="@android:color/white"
+        app:backgroundTint="@color/grey_80"
+        app:elevation="0dp"
+        app:fabSize="mini"
+        app:rippleColor="@android:color/white"
+        app:srcCompat="@drawable/ic_close" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_popup_img" />
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:id="@+id/textmaintain"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="@dimen/fivedp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/lato_black"
+            android:textSize="16sp"
+            android:text="Swipe LEFT  or RIGHT for multiple pages." />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_80"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/tendp"
+            android:text="@string/ok"/>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

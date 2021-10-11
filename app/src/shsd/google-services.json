@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "273554568765",
+    "firebase_url": "https://sacred-heart-school-41cf3.firebaseio.com",
+    "project_id": "sacred-heart-school-41cf3",
+    "storage_bucket": "sacred-heart-school-41cf3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:273554568765:android:9c5ab975a5b19cf9029c54",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.shsd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "273554568765-37m3o8hab7gcha18k5t8a7jpge98q046.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr-7sU87Pq3xr8vhLfQSDJmCw2ESn2mow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "273554568765-37m3o8hab7gcha18k5t8a7jpge98q046.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "198101618566",
+    "firebase_url": "https://iitians-85ba1.firebaseio.com",
+    "project_id": "iitians-85ba1",
+    "storage_bucket": "iitians-85ba1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198101618566:android:c48fc8bb1d8df567a3a607",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.iitians"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "198101618566-kaftloj7cn1pjn61c10914f6pcch9gm9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.iitians",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "198101618566-t26taoii63jsmpdke56cjilus6qd7ai3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwobmD0VeJvyrr4jQzKPcByKLE6mjK6kg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "198101618566-t26taoii63jsmpdke56cjilus6qd7ai3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

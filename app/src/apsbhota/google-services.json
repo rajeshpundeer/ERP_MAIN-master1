@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "769913410335",
+    "firebase_url": "https://aryan-public-school-bhota.firebaseio.com",
+    "project_id": "aryan-public-school-bhota",
+    "storage_bucket": "aryan-public-school-bhota.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769913410335:android:ac1b45ec5e6c1b6437562a",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.apsbhota"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769913410335-e785u3f6t19v526li747v56sgfsl0m6j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmEz2CxWDLRAbScnvIt-zmUR-QSUZr5dI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769913410335-e785u3f6t19v526li747v56sgfsl0m6j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

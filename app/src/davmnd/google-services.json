@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1011669111659",
+    "firebase_url": "https://davmandi-80d0a.firebaseio.com",
+    "project_id": "davmandi-80d0a",
+    "storage_bucket": "davmandi-80d0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011669111659:android:97e2c617150aae9610b22e",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.davmnd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011669111659-fd78u3rhtpngju7m7fk8l8fld1k4797m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.davmnd",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "1011669111659-vm7uco2o91u13o1doe63cdk93rkcdb8o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIAH34n4RVoAufu4hrHRYwIN5ZW0mV3LU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011669111659-vm7uco2o91u13o1doe63cdk93rkcdb8o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

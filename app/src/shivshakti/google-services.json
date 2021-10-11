@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1098091700456",
+    "firebase_url": "https://shivshakti-24b37.firebaseio.com",
+    "project_id": "shivshakti-24b37",
+    "storage_bucket": "shivshakti-24b37.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098091700456:android:188d38b5dc1e43f1daa95d",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.shivshakti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098091700456-e6d7ofvsirj5nnl2r1f284k3o9d66q71.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.shivshakti",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "1098091700456-kjhcnv77obj324nr2vddk7liffu9ib1h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtWqZCjo-fhywVgTFSs8N4dC9W_BSI0BY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1098091700456-kjhcnv77obj324nr2vddk7liffu9ib1h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

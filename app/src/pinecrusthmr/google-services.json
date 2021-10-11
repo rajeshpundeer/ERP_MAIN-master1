@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1361085965",
+    "firebase_url": "https://pinecrest-15132.firebaseio.com",
+    "project_id": "pinecrest-15132",
+    "storage_bucket": "pinecrest-15132.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1361085965:android:1b67c473ab86df722ff744",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.pinecrusthmr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1361085965-qvdsib449kcdu45muu5o2aj1tgs2ej84.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.pinecrusthmr",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "1361085965-sh3egdin1eac4apt2hc40rjkl2lltni7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBESbBgHgq13bAQTc52rKwKRvFrMRpIUgA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1361085965-sh3egdin1eac4apt2hc40rjkl2lltni7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

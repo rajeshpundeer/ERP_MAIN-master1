@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "588573823715",
+    "firebase_url": "https://him-adarsh.firebaseio.com",
+    "project_id": "him-adarsh",
+    "storage_bucket": "him-adarsh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588573823715:android:ad32d410b2afb66d18abd6",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.himadarsh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588573823715-rgoqcqqlfj5pmtg753mcl2fjabr9ne6s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.himadarsh",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "588573823715-9brfft765b6nmhpnf0v01i8vrgpus9qg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL0kb1uF9ETqO5VfsaoypHpZdFJWq-PrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588573823715-9brfft765b6nmhpnf0v01i8vrgpus9qg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

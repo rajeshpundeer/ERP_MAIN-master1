@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "361976788135",
+    "firebase_url": "https://dav-bankhandi.firebaseio.com",
+    "project_id": "dav-bankhandi",
+    "storage_bucket": "dav-bankhandi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361976788135:android:53863c60565d8f91319782",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.davbankhandi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "361976788135-ij7mph7ojk4uujdmm7h9sd8u37einqsb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.davbankhandi",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "361976788135-1a7enu11c25h1pa8ck0606lemst3h1kh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMZheyccBQA9wT-WHvw8Z7n36JzsRBsys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361976788135-1a7enu11c25h1pa8ck0606lemst3h1kh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

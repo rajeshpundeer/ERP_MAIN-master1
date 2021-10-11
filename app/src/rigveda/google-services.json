@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1554591551",
+    "firebase_url": "https://rigveda-2b0bb.firebaseio.com",
+    "project_id": "rigveda-2b0bb",
+    "storage_bucket": "rigveda-2b0bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1554591551:android:ce2048a92f0e9fc3716d8a",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.rigveda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1554591551-jvl7f091nksuq6na1u3g5t3t5c510pha.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.rigveda",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "1554591551-p39650u4putcg07999cpfo6q54crt1id.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRGoBCgFBcKzmyFLaKKfki0kuTpgrJ3bw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1554591551-p39650u4putcg07999cpfo6q54crt1id.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

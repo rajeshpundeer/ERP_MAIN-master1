@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.school.iqdigit.Activity.GalleryActivity">
+    <LinearLayout
+        android:id="@+id/toolbar_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_arrow_back1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingEnd="40dp"
+            android:text="@string/gallery"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/toolbar_gallery"
+        android:layout_marginTop="10dp"
+        android:id="@+id/vericalsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingEnd="20dp"
+        tools:ignore="RtlSymmetry" />
+    <TextView
+        android:id="@+id/tvGallery"
+        android:layout_below="@+id/vericalsRecyclerView"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:text="@string/gallery"
+        android:textStyle="bold"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:layout_marginStart="10dp"
+        android:id="@+id/galleryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvGallery"
+        android:clipToPadding="false"
+        android:paddingEnd="20dp"
+        tools:ignore="RtlSymmetry" />
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/noGallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="101dp"
+            android:layout_height="102dp"
+            android:layout_gravity="center"
+            android:src="@drawable/image_gallery" />
+
+        <TextView
+            android:id="@+id/acti_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/alegreya_bold"
+            android:maxLines="2"
+            android:text="@string/no_photos_available"
+            android:textColor="@color/Blacklight"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_margin="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:backgroundTint="@color/White"/>
+        </RelativeLayout>
+        <ProgressBar
+            android:id="@+id/fabProgress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/colorPrimary" />
+    </RelativeLayout>
+</RelativeLayout>

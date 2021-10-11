@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_tutorial"
+        android:icon="@drawable/study"
+        android:title="@string/tutorial" />
+    <item
+        android:id="@+id/navigation_booklet"
+        android:icon="@drawable/study"
+        android:title="@string/booklets" />
+    <item
+        android:id="@+id/navigation_images"
+        android:icon="@drawable/ic_video_library"
+        android:title="@string/Images" />
+    <item
+        android:id="@+id/navigation_Video"
+        android:icon="@drawable/ic_video_library"
+        android:title="@string/Video" />
+
+</menu>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layoutAttendance"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fortyfivedp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2.41">
+
+        <TextView
+            android:id="@+id/tvStdName"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/fortyfivedp"
+            android:layout_weight="1.4"
+            android:gravity="start"
+            android:paddingLeft="@dimen/onedp"
+            android:background="@drawable/ic_corner_view_two"
+            android:textColor="@color/grey_80"
+            android:textSize="16sp"
+            android:layout_marginBottom="@dimen/onedp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/White"
+            android:layout_weight=".01"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/fortyfivedp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@drawable/spinner_shape_tranceparent">
+
+        <Spinner
+            android:id="@+id/spinnerAttendance"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fortyfivedp"
+            android:layout_marginBottom="@dimen/onedp" />
+    </LinearLayout>
+
+    </LinearLayout>

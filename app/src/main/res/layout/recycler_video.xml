@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/fivedp"
+    android:layout_marginTop="@dimen/fivedp"
+    android:layout_marginEnd="@dimen/fivedp"
+    android:src="@color/grey_500">
+
+    <LinearLayout
+        android:id="@+id/llView"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/grey_80"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/tendp"
+            android:layout_weight="3.65">
+
+            <TextView
+                android:id="@+id/tvTitleVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_80"
+                android:fontFamily="@font/alegreya_bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/eighteensp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitleVideo"
+                android:background="@color/grey_80"
+                android:fontFamily="@font/alegreya_bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sixteensp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/imgEdit"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_weight=".40"
+            android:layout_marginRight="@dimen/fivedp"
+            android:layout_margin="@dimen/fivedp"
+            android:background="@drawable/ic_edit"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llView"
+        android:background="@color/grey_400"
+        android:paddingTop="@dimen/tendp"
+        android:paddingBottom="@dimen/tendp">
+
+        <ImageView
+            android:id="@+id/imgThumnail"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:background="@drawable/youtube"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+</RelativeLayout>

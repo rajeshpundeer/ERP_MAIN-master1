@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "256468014103",
+    "project_id": "navjyoti-4a5e1",
+    "storage_bucket": "navjyoti-4a5e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256468014103:android:2ffa05ce5f487e3fc03852",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.navjyoti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256468014103-g9di6e7vkphghhp4ttq29o37kmjkc65k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.navjyoti",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "256468014103-fql823l5d1emq1oql8is0ink3p4e5bnf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHizuukb4BS-FzRe6cEJTK9ET7IBSAsdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "256468014103-fql823l5d1emq1oql8is0ink3p4e5bnf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

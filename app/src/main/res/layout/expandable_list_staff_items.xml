@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_margin="@dimen/tendp"
+    android:background="@drawable/ic_corner_view_two"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/lblListItem"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".85"
+        android:background="@drawable/ic_corner_view_two"
+        android:fontFamily="@font/lato_regular"
+        android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/black"
+        android:textSize="17dip" />
+
+    <ImageView
+        android:id="@+id/imgeditchapter"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/twodp"
+        android:layout_weight=".10"
+        android:background="@drawable/ic_edit"
+        android:backgroundTint="@color/grey_80" />
+
+</LinearLayout>

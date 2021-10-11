@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "736830352328",
+    "project_id": "geetaadarsh-c195c",
+    "storage_bucket": "geetaadarsh-c195c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:736830352328:android:728be7dfa8c067fba1aefd",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.gavsolan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "736830352328-ttj9685nanq07anno8g3jjabmrr79ono.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.gavsolan",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "736830352328-859ks80erspuiuhoma2e65l6mlugrqnc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByISOkDwGSFbbSIn_udsdBc2vOsf71ZJg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "736830352328-859ks80erspuiuhoma2e65l6mlugrqnc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

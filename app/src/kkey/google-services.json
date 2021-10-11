@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "529321712206",
+    "firebase_url": "https://kkey-a52c3.firebaseio.com",
+    "project_id": "kkey-a52c3",
+    "storage_bucket": "kkey-a52c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529321712206:android:d112e7c3802e7da575c11f",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.kkey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529321712206-42epa7iei5ftfhbep6toackr6f2i6a70.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.kkey",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "529321712206-78lle31vihplotlcogg8qsh1jl408uv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVyq4DPHoqAVmbd-1Lr8kgeAzc6aILAcE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529321712206-78lle31vihplotlcogg8qsh1jl408uv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

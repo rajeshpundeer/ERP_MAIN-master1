@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "816414088866",
+    "firebase_url": "https://the-magnet-school.firebaseio.com",
+    "project_id": "the-magnet-school",
+    "storage_bucket": "the-magnet-school.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816414088866:android:98eda27fe7b4a6818701fb",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.magnet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "816414088866-knefr22u252mthl6fglc5v809devf4vn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSxe6qWXbBgkoNWw-Q5ptIYYen9xkXaVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "816414088866-knefr22u252mthl6fglc5v809devf4vn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "503720983617",
+    "firebase_url": "https://dav-brm.firebaseio.com",
+    "project_id": "dav-brm",
+    "storage_bucket": "dav-brm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503720983617:android:b252a5cbd8fa4c61481ac0",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.davbmn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "503720983617-cpkl4hlob1e2mf13spr77v2l2qcs39st.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.davbmn",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "503720983617-3948fkfoe5db1ugtrr65eopbicu0bqgt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfks2b0DdDnUXFKaWl4OvXknWLat1iFgo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "503720983617-3948fkfoe5db1ugtrr65eopbicu0bqgt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

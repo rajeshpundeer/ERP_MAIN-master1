@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.school.iqdigit.Activity.FeeStructureViewActivity">
+    <LinearLayout
+        android:id="@+id/lltoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark">
+        <ImageView
+            android:id="@+id/backbtnfee"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_arrow_back1"/>
+        <TextView
+            android:id="@+id/tvfee"
+            android:gravity="center"
+            android:paddingEnd="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textColor="@color/White"
+            android:textStyle="bold"
+            android:text="@string/feestructure"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imgFee"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/lltoolbar"/>
+</RelativeLayout>

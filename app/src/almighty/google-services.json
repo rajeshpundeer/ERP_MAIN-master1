@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1064837179952",
+    "firebase_url": "https://almityhmr.firebaseio.com",
+    "project_id": "almityhmr",
+    "storage_bucket": "almityhmr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064837179952:android:25a6e8f4f91f97bb305bf5",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.almighty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1064837179952-g0cikq7l134c5f5548aaf27d2ugap124.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.almighty",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "1064837179952-8v4vga90r2gmqmsb009a65fck5pk3fn7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArw-p0OtP-PDs7ZQvb7imzROfgHKgVUy0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1064837179952-8v4vga90r2gmqmsb009a65fck5pk3fn7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

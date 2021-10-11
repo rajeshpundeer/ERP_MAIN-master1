@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "214409586401",
+    "project_id": "gurukul-hamirpur",
+    "storage_bucket": "gurukul-hamirpur.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214409586401:android:d764bef32dfee415a7b9a0",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.gurukulhmr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214409586401-aev7mfv2akck963erom2325hj5a1s5uc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.gurukulhmr",
+            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+          }
+        },
+        {
+          "client_id": "214409586401-aesv85ocir9ujj9nhpabrel4oaukmt7c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJK6CDy6wK67OyOCY1vKyCanGiFY32rLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214409586401-aesv85ocir9ujj9nhpabrel4oaukmt7c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

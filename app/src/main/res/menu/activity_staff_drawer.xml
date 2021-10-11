@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_home_staff"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/home"/>
+    <item android:id="@+id/nav_profile_staff"
+          android:icon="@drawable/ic_profile_pin_black_24dp"
+          android:title="@string/profile"/>
+    <item android:id="@+id/nav_homework_staff"
+          android:icon="@drawable/homework"
+          android:title="@string/homework"/>
+    <item android:id="@+id/nav_add_activity_staff"
+        android:icon="@drawable/activity_img"
+        android:title="@string/add_activity"/>
+    <item android:id="@+id/nav_add_alert_staff"
+        android:icon="@drawable/alert"
+        android:title="@string/add_alerts"/>
+    <item android:id="@+id/nav_logout_staff"
+          android:icon="@drawable/ic_logout_black_24dp"
+          android:title="@string/logout"/>
+</menu>
