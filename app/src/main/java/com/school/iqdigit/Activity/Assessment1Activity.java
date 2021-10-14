@@ -176,6 +176,7 @@ public class Assessment1Activity extends AppCompatActivity implements View.OnCli
         if (writepermission != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
         }
+
         if (!listPermissionsNeeded.isEmpty()) {
             ActivityCompat.requestPermissions(this, listPermissionsNeeded.toArray(new String[listPermissionsNeeded.size()]), REQUEST_ID_MULTIPLE_PERMISSIONS);
             return false;
@@ -201,7 +202,8 @@ public class Assessment1Activity extends AppCompatActivity implements View.OnCli
                 // Check for both permissions
                 if (perms.get(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED
                         && perms.get(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
-                        && perms.get(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                        && perms.get(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
+                ) {
                     Log.d(TAG, "camera services permission granted");
                     permissiongranted = true;
                 } else {
@@ -211,8 +213,9 @@ public class Assessment1Activity extends AppCompatActivity implements View.OnCli
                     //show the dialog or snackbar saying its necessary and try again otherwise proceed with setup.
                     if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)
                             || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)
-                            || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-                        showDialogOK("Service Permissions are required for this app",
+                            || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    ) {
+                        showDialogOK("Storage Permissions are required for this app",
                                 new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
@@ -227,9 +230,7 @@ public class Assessment1Activity extends AppCompatActivity implements View.OnCli
                                         }
                                     }
                                 });
-                    }
-
-                    else {
+                    } else {
                         explain("You need to give some mandatory permissions to continue. Do you want to go to app settings?");
                         //                            //proceed with logic by disabling the related features or quit the app.
                     }
@@ -302,10 +303,12 @@ public class Assessment1Activity extends AppCompatActivity implements View.OnCli
     }
     private void createPDFNew() {
         progressDialog.show();
+
         File  dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
 
         if (!dir.exists())
             dir.mkdirs();
+
         File file = new File(dir, "assessment.pdf");
         Document document = new Document();
         try {
