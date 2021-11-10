@@ -93,7 +93,7 @@ public class feepayment extends AppCompatActivity {
     private String default_selection= "";
     //Gateway Parameters
     private String TAG = "feepayment";
-    private String merchant_id, access_code, api_key, redirect_url, return_url_reg, cancel_url_reg, orderId;
+    private String merchant_id, access_code, api_key, redirect_url, return_url_reg, cancel_url_reg, orderId,orderIdtrack1;
     private boolean checkinternet;
 
     @Override
@@ -281,7 +281,8 @@ public class feepayment extends AppCompatActivity {
             public void onClick(View v) {
                 if (GATEWAY_NAME_CODE == 0) {
                     if (InternetCheck.isInternetOn(feepayment.this) == true) {
-                        paybytraknpay();
+                        getorderid1();
+                        //paybytraknpay();
                     }
                     else {
                         showsnackbar();
@@ -736,7 +737,6 @@ public class feepayment extends AppCompatActivity {
     // TraknPay Gateway Call
     private void paybytraknpay() {
         String ADM = getadmintionid();
-        getorderid();
 
         SharedHelper.putKey(this, "amount" ,total_amount.getText().toString().trim());
         SharedHelper.putKey(this, "gFID",gFid );
@@ -777,9 +777,9 @@ public class feepayment extends AppCompatActivity {
         final String PG_UDF5 = "udf5";
 
 
-        Random rnd = new Random();
-        int n = 100000 + rnd.nextInt(900000);
-        PG_ORDER_ID = Integer.toString(n);
+      //  Random rnd = new Random();
+       // int n = 100000 + rnd.nextInt(900000);
+        PG_ORDER_ID = orderIdtrack1;
 
         PaymentParams pgPaymentParams = new PaymentParams();
         pgPaymentParams.setAPiKey(PG_API_KEY);
@@ -807,6 +807,28 @@ public class feepayment extends AppCompatActivity {
         PaymentGatewayPaymentInitializer pgPaymentInitialzer = new PaymentGatewayPaymentInitializer(pgPaymentParams, feepayment.this);
         pgPaymentInitialzer.initiatePaymentProcess();
 
+    }
+
+    private void getorderid1() {
+        User user =  SharedPrefManager.getInstance(this).getUser();
+        Call<GetFeeOrderIdResponse> call = RetrofitClient.getInstance().getApi().addonlinepaymentorderid(user.getId(), String.valueOf(total_amount.getText()));
+        call.enqueue(new Callback<GetFeeOrderIdResponse>() {
+            @Override
+            public void onResponse(Call<GetFeeOrderIdResponse> call, Response<GetFeeOrderIdResponse> response) {
+                if (response.isSuccessful() && response != null) {
+                    orderIdtrack1 = response.body().getOrderid();
+                    Log.d("order_id",orderIdtrack1);
+                    SharedHelper.putKey(feepayment.this, "orderIdtrack1",orderIdtrack1);
+                    paybytraknpay();
+                    mProg.dismiss();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<GetFeeOrderIdResponse> call, Throwable t) {
+                mProg.dismiss();
+            }
+        });
     }
 
     private void feepaymentdone() {
