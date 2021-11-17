@@ -33,22 +33,27 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/llToolbar">
+        android:layout_below="@+id/llToolbar"
+        android:layout_marginBottom="60dp">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            >
-    <TextView
-        android:id="@+id/tvInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/tap_icon_to_add_your_image"
-        android:textSize="18sp"
-        android:layout_margin="30dp"
-        android:textStyle="bold"
-        android:fontFamily="@font/lato_black"
-        android:gravity="left"
-        android:textAlignment="gravity"/>
+            android:layout_marginBottom="60dp">
+
+            <TextView
+                android:id="@+id/tvInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/lato_black"
+                android:gravity="left"
+                android:text="Tab + Button to click Photo"
+                android:textAlignment="gravity"
+                android:textSize="18sp"
+                android:textStyle="bold" />
     <RelativeLayout
         android:id="@+id/rlImage"
         android:layout_centerHorizontal="true"
@@ -65,11 +70,12 @@
             android:textSize="16sp"
             android:fontFamily="@font/lato_black"
             android:gravity="center"/>
+
         <ImageView
-            android:background="@drawable/ic_corner_view_one"
             android:id="@+id/img_pic"
             android:layout_width="250dp"
             android:layout_height="250dp"
+            android:background="@drawable/ic_corner_view_one"
             android:scaleType="fitXY" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

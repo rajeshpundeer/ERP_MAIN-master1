@@ -254,9 +254,4 @@ public class IcardStaffActivity extends AppCompatActivity implements IcardStuden
         getStudentslist();
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        getStudentslist();
-    }
 }
