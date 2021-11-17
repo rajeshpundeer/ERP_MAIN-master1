@@ -102,8 +102,7 @@
                                         android:text="+91"
                                         android:background="@color/transparent"
                                         android:fontFamily="@font/quicksand_bold"
-                                        android:textColor="@color/grey_80"
-                                        />
+                                        android:textColor="@color/grey_80" />
 
                                     <View
                                         android:layout_width="@dimen/spacing_middle"

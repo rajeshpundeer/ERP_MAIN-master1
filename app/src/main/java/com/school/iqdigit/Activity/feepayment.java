@@ -135,7 +135,7 @@ public class feepayment extends AppCompatActivity {
 
         Toast.makeText(this,"Today's Date: " + currentYear + currentMonth + currentDay, Toast.LENGTH_SHORT).show();
         mProg.setMessage("Loading.....");
-        mProg.setTitle(R.string.app_name_main);
+        mProg.setTitle(R.string.app_name);
         mProg.show();
 
         final User user = SharedPrefManager.getInstance(feepayment.this).getUser();
@@ -144,7 +144,7 @@ public class feepayment extends AppCompatActivity {
             public void onClick(View view) {
                 if (InternetCheck.isInternetOn(feepayment.this) == true) {
                     mProg.setMessage("Loading.....");
-                    mProg.setTitle(R.string.app_name_main);
+                    mProg.setTitle(R.string.app_name);
                     mProg.show();
 
                     Call<feeamountresponse> call12 = RetrofitClient
@@ -602,7 +602,7 @@ public class feepayment extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     mProg.setMessage("Loading.....");
-                    mProg.setTitle(R.string.app_name_main);
+                    mProg.setTitle(R.string.app_name);
                     mProg.show();
                     String month = feelist.getMonthnum();
                     User user = SharedPrefManager.getInstance(feepayment.this).getUser();

@@ -10,12 +10,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.school.iqdigit.Activity.IcardActivity;
 import com.school.iqdigit.Api.RetrofitClient;
 import com.school.iqdigit.Model.DefaultResponse;
@@ -66,6 +68,13 @@ public class IcardAdapter extends RecyclerView.Adapter<IcardAdapter.UsersViewHol
             usersViewHolder.btnStatusLock.setVisibility(View.GONE);
             usersViewHolder.btnStatusUnlock.setVisibility(View.VISIBLE);
         }
+
+        Glide.with(mCtx)
+                .load("url here") // image url
+                .placeholder(R.drawable.user_icon) // any placeholder to load at start
+                .override(50, 50) // resizing
+                .centerCrop()
+                .into(usersViewHolder.student_image);
 
         usersViewHolder.btnStatusUnlock.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -146,13 +155,14 @@ public class IcardAdapter extends RecyclerView.Adapter<IcardAdapter.UsersViewHol
     class UsersViewHolder extends RecyclerView.ViewHolder {
         private TextView student_name;
         private Button btnStatusUnlock, btnStatusLock, btnUpload;
-
+        private ImageView student_image;
         public UsersViewHolder(@NonNull View itemView) {
             super(itemView);
             student_name = itemView.findViewById(R.id.tvStudentName);
             btnStatusUnlock = itemView.findViewById(R.id.btnStatusUnlock);
             btnStatusLock = itemView.findViewById(R.id.btnStatusLock);
             btnUpload = itemView.findViewById(R.id.btnUpload);
+            student_image = itemView.findViewById(R.id.student_image);
         }
     }
 }

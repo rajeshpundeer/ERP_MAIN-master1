@@ -30,6 +30,14 @@
             android:text="@string/Profile_pic"
             tools:ignore="RtlSymmetry" />
     </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llToolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
     <TextView
         android:id="@+id/tvInfo"
         android:layout_width="match_parent"
@@ -40,7 +48,6 @@
         android:textStyle="bold"
         android:fontFamily="@font/lato_black"
         android:gravity="left"
-        android:layout_below="@+id/llToolbar"
         android:textAlignment="gravity"/>
     <RelativeLayout
         android:id="@+id/rlImage"
@@ -83,6 +90,8 @@
             app:srcCompat="@drawable/ic_add_black_24dp" />
 
     </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_submit"
         android:layout_width="match_parent"

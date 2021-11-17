@@ -82,7 +82,6 @@ public class LiveClassStaff1Activity extends AppCompatActivity {
             @Override
             public void onResponse(Call<LiveClass1Response> call, Response<LiveClass1Response> response) {
                 mProg.dismiss();
-                
                 myURL = response.body().staffurl_prefix+"&teacher_id=" + teachetid + "&mobile=" + mobileno + "&otp=" + otp;
                 runLiveclass(myURL);
             }
