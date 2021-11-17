@@ -253,4 +253,10 @@ public class IcardStaffActivity extends AppCompatActivity implements IcardStuden
     public void getId(String getId) {
         getStudentslist();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getStudentslist();
+    }
 }

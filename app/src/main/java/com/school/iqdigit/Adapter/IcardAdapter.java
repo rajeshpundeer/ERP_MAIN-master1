@@ -70,8 +70,7 @@ public class IcardAdapter extends RecyclerView.Adapter<IcardAdapter.UsersViewHol
         }
 
         Glide.with(mCtx)
-                .load("url here") // image url
-                .placeholder(R.drawable.user_icon) // any placeholder to load at start
+                .load(studentdetail.getPre_image().toString()) // image url
                 .override(50, 50) // resizing
                 .centerCrop()
                 .into(usersViewHolder.student_image);

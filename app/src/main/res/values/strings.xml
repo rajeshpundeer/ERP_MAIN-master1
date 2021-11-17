@@ -388,7 +388,7 @@
     <string name="Profile_pic">Profile Picture</string>
     <string name="icard">ID CARD</string>
     <string name="Unlock">UnLock</string>
-    <string name="photo_Status">Photo Status</string>
+    <string name="photo_Status">Actions</string>
     <string name="yet_not_uploaded">Yet Not uploaded</string>
     <string name="Change_status">Change Status</string>
     <string name="no_students_available">No Students Available</string>

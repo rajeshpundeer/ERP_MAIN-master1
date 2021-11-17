@@ -35,19 +35,23 @@
             android:textSize="20sp"
             android:textStyle="bold"
             tools:ignore="RtlSymmetry" />
+
         <Button
             android:id="@+id/btnAddUnit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/twodp"
+            android:layout_marginTop="@dimen/twodp"
+            android:layout_marginEnd="@dimen/twodp"
+            android:layout_marginBottom="@dimen/twodp"
             android:background="@drawable/edit_text_round_bg_outline"
             android:backgroundTint="@color/white"
-            android:text="@string/unit"
-            android:textColor="@color/grey_80"
             android:drawableLeft="@drawable/ic_add"
-            android:drawableTint="@color/grey_80"
             android:drawablePadding="@dimen/twodp"
-            android:layout_margin="@dimen/twodp"/>
+            android:drawableTint="@color/grey_80"
+            android:text="@string/unit"
+            android:textColor="@color/grey_80" />
     </RelativeLayout>
         <ExpandableListView
             android:id="@+id/lvExp"

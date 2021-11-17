@@ -380,6 +380,7 @@ public class AddPdfActivity extends AppCompatActivity implements GetClikedImageP
 
         return extension;
     }
+
     static File pickedExistingPicture(@NonNull Context context, Uri photoUri) throws IOException {
         InputStream pictureInputStream = context.getContentResolver().openInputStream(photoUri);
         File directory = tempImageDirectory(context);
@@ -388,6 +389,7 @@ public class AddPdfActivity extends AppCompatActivity implements GetClikedImageP
         writeToFile(pictureInputStream, photoFile);
         return photoFile;
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

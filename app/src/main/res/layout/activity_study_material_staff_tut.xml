@@ -202,14 +202,17 @@
         android:id="@+id/fabTutorial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:src="@drawable/ic_add_floating"
-        android:contentDescription="@string/submit"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="@color/blue_800"
-        app:maxImageSize="50dp"
-        android:layout_margin="40dp" />
+        android:contentDescription="@string/submit"
+        android:src="@drawable/ic_add_floating"
+        app:maxImageSize="50dp" />
     <LinearLayout
         android:id="@+id/noavailable"
         android:layout_width="match_parent"
