@@ -162,7 +162,6 @@ public class ExamMarksStaffActivity extends AppCompatActivity {
 
     //exam marks entry adapter
     public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UsersViewHolder> {
-
         private Context mCtx;
         private List<GetStudentsbyexamlist> StudentsbyexamList;
         private List<String> marksList1 = new ArrayList<>();
@@ -202,7 +201,8 @@ public class ExamMarksStaffActivity extends AppCompatActivity {
 
                 @Override
                 public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                    marksList1.set(position , charSequence.toString());
+                    marksList1.set(usersViewHolder.getAdapterPosition() , charSequence.toString());
+                    StudentsbyexamList.get(position).setMarks(charSequence.toString());
                     Log.d(TAG , marksList1.size()+ " size");
                 }
 
