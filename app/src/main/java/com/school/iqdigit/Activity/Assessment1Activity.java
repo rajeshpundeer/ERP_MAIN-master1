@@ -269,9 +269,6 @@ public class Assessment1Activity extends AppCompatActivity implements View.OnCli
         dialog.show();
     }
 
-
-
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -303,12 +300,9 @@ public class Assessment1Activity extends AppCompatActivity implements View.OnCli
     }
     private void createPDFNew() {
         progressDialog.show();
-
         File  dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
-
         if (!dir.exists())
             dir.mkdirs();
-
         File file = new File(dir, "assessment.pdf");
         Document document = new Document();
         try {

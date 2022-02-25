@@ -112,6 +112,7 @@ public class AddAssessmentActivity extends AppCompatActivity implements GetClike
     private int REQUEST_ID_MULTIPLE_PERMISSIONS = 1;
     private boolean permissiongranted;
     private String assessment = "1";
+    RequestBody requestFile;
     File mainfile = new File("null");
     int year, year1;
     int month, month1;
@@ -789,25 +790,7 @@ public class AddAssessmentActivity extends AppCompatActivity implements GetClike
 
         if (!mainfile.getPath().equals("null")) {
             main = new Compressor(this).compressToFile(mainfile);
-        } else {
-            bytearrayoutputstream = new ByteArrayOutputStream();
-            Drawable drawable = getResources().getDrawable(R.drawable.homework_pic);
-            Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 60, bytearrayoutputstream);
-            file = new File(Environment.getExternalStorageDirectory() + "/SampleImage.JPEG");
-            try {
-                file.createNewFile();
-                FileOutputStream fileoutputstream = new FileOutputStream(file);
-                fileoutputstream.write(bytearrayoutputstream.toByteArray());
-                fileoutputstream.close();
-                Log.d(TAG, file.getAbsolutePath());
-                mainfile = new File(file.getAbsolutePath());
-                main = new Compressor(this).compressToFile(mainfile);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
         }
-
 
         Log.d(TAG, mainpdf + " " + mainfile + " " + ed_mcqno.getText().toString() + " mcqno " + ed_mcq_marks.getText().toString() + " mcqmarks");
         max = edMaximum.getText().toString();
@@ -850,7 +833,11 @@ public class AddAssessmentActivity extends AppCompatActivity implements GetClike
                         Log.d(TAG, choose_date.getText().toString() + "start" + btnEnd.getText().toString());
                         if (remarksitem.equalsIgnoreCase("Marks")) {
                             if (!max.equals("")) {
-                                RequestBody requestFile = RequestBody.create(MediaType.parse("image/*"), main);
+                                if (!mainfile.getPath().equals("null")) {
+                                   requestFile = RequestBody.create(MediaType.parse("image/*"), main);
+                                }else {
+                                     requestFile = RequestBody.create(MediaType.parse("image/*"),"");
+                                }
                                 if (rl_Images.getVisibility() == View.VISIBLE) {
                                     if (assessment_images.size() > 0) {
                                         requestPdf = RequestBody.create(MediaType.parse("application/pdf"), mainpdf);
@@ -908,7 +895,11 @@ public class AddAssessmentActivity extends AppCompatActivity implements GetClike
                                 Toast.makeText(AddAssessmentActivity.this, "Please Enter Maximum marks", Toast.LENGTH_LONG).show();
                             }
                         } else {
-                            RequestBody requestFile = RequestBody.create(MediaType.parse("image/*"), main);
+                            if (!mainfile.getPath().equals("null")) {
+                                requestFile = RequestBody.create(MediaType.parse("image/*"), main);
+                            }else {
+                                requestFile = RequestBody.create(MediaType.parse("image/*"),"");
+                            }
                             if (rl_Images.getVisibility() == View.VISIBLE) {
                                 if (assessment_images.size() > 0) {
                                     requestPdf = RequestBody.create(MediaType.parse("application/pdf"), mainpdf);
@@ -979,7 +970,11 @@ public class AddAssessmentActivity extends AppCompatActivity implements GetClike
             time_bound1 = "0";
             if (remarksitem.equalsIgnoreCase("Marks")) {
                 if (!max.equals("")) {
-                    RequestBody requestFile = RequestBody.create(MediaType.parse("image/*"), main);
+                    if (!mainfile.getPath().equals("null")) {
+                        requestFile = RequestBody.create(MediaType.parse("image/*"), main);
+                    }else {
+                        requestFile = RequestBody.create(MediaType.parse("image/*"),"");
+                    }
                     if (rl_Images.getVisibility() == View.VISIBLE) {
                         if (assessment_images.size() > 0) {
                             requestPdf = RequestBody.create(MediaType.parse("application/pdf"), mainpdf);
@@ -1040,7 +1035,11 @@ public class AddAssessmentActivity extends AppCompatActivity implements GetClike
                     Toast.makeText(AddAssessmentActivity.this, "Please Enter Maximum marks", Toast.LENGTH_LONG).show();
                 }
             } else {
-                RequestBody requestFile = RequestBody.create(MediaType.parse("image/*"), main);
+                if (!mainfile.getPath().equals("null")) {
+                    requestFile = RequestBody.create(MediaType.parse("image/*"), main);
+                }else {
+                    requestFile = RequestBody.create(MediaType.parse("image/*"),"");
+                }
                 if (rl_Images.getVisibility() == View.VISIBLE) {
                     if (assessment_images.size() > 0) {
                         requestPdf = RequestBody.create(MediaType.parse("application/pdf"), mainpdf);
