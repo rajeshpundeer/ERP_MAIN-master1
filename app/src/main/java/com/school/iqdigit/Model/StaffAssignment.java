@@ -5,60 +5,73 @@ import com.google.gson.annotations.SerializedName;
 
 public class StaffAssignment {
 
-@SerializedName("subject_id")
-@Expose
-private Integer subjectId;
-@SerializedName("subject_name")
-@Expose
-private String subjectName;
-@SerializedName("subject_address")
-@Expose
-private String subjectAddress;
-@SerializedName("subject_title")
-@Expose
-private String subjectTitle;
-@SerializedName("subject_description")
-@Expose
-private String subjectDescription;
+    @SerializedName("subject_id")
+    @Expose
+    private Integer subjectId;
 
-public Integer getSubjectId() {
-return subjectId;
-}
+    public String getClassname() {
+        return classname;
+    }
 
-public void setSubjectId(Integer subjectId) {
-this.subjectId = subjectId;
-}
+    public void setClassname(String classname) {
+        this.classname = classname;
+    }
 
-public String getSubjectName() {
-return subjectName;
-}
+    @SerializedName("classname")
+    @Expose
+    private String classname;
 
-public void setSubjectName(String subjectName) {
-this.subjectName = subjectName;
-}
+    @SerializedName("subject_name")
+    @Expose
+    private String subjectName;
+    @SerializedName("subject_address")
+    @Expose
+    private String subjectAddress;
+    @SerializedName("subject_title")
+    @Expose
+    private String subjectTitle;
+    @SerializedName("subject_description")
+    @Expose
+    private String subjectDescription;
 
-public String getSubjectAddress() {
-return subjectAddress;
-}
+    public Integer getSubjectId() {
+        return subjectId;
+    }
 
-public void setSubjectAddress(String subjectAddress) {
-this.subjectAddress = subjectAddress;
-}
+    public void setSubjectId(Integer subjectId) {
+        this.subjectId = subjectId;
+    }
 
-public String getSubjectTitle() {
-return subjectTitle;
-}
+    public String getSubjectName() {
+        return subjectName;
+    }
 
-public void setSubjectTitle(String subjectTitle) {
-this.subjectTitle = subjectTitle;
-}
+    public void setSubjectName(String subjectName) {
+        this.subjectName = subjectName;
+    }
 
-public String getSubjectDescription() {
-return subjectDescription;
-}
+    public String getSubjectAddress() {
+        return subjectAddress;
+    }
 
-public void setSubjectDescription(String subjectDescription) {
-this.subjectDescription = subjectDescription;
-}
+    public void setSubjectAddress(String subjectAddress) {
+        this.subjectAddress = subjectAddress;
+    }
+
+    public String getSubjectTitle() {
+        return subjectTitle;
+    }
+
+    public void setSubjectTitle(String subjectTitle) {
+        this.subjectTitle = subjectTitle;
+    }
+
+    public String getSubjectDescription() {
+        return subjectDescription;
+    }
+
+    public void setSubjectDescription(String subjectDescription) {
+        this.subjectDescription = subjectDescription;
+    }
 
 }

@@ -63,7 +63,7 @@ public class AssSubStaffAdapter extends RecyclerView.Adapter<AssSubStaffAdapter.
     @Override
     public void onBindViewHolder(@NonNull final AssSubHolder assSubHolder, int i) {
         final StaffAssignment assSub = assSubList.get(i);
-        assSubHolder.subject.setText("Subject :" + assSub.getSubjectName());
+        assSubHolder.subject.setText(assSub.getClassname()+"(" + assSub.getSubjectName()+")");
         assSubHolder.title.setText(assSub.getSubjectTitle());
         assSubHolder.description.setText(assSub.getSubjectDescription());
         final String imgeurl = assSub.getSubjectAddress();

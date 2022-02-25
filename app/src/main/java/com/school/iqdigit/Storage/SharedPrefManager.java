@@ -45,9 +45,7 @@ public class SharedPrefManager {
                 sharedPreferences.getString("phone",null),
                 sharedPreferences.getString("name",null),
                 sharedPreferences.getString("p_class",null),
-                sharedPreferences.getString("incharge_id",null)
-
-        );
+                sharedPreferences.getString("incharge_id",null));
     }
     public void clear(){
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);

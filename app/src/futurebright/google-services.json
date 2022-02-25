@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "449832581259",
+    "project_id": "futurebright-7455b",
+    "storage_bucket": "futurebright-7455b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449832581259:android:5c425d297d8eef8a3abc8e",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.futurebright"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449832581259-1f002tvub027ff70684bltepfpfloa30.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.futurebright",
+            "certificate_hash": "9ff211329eb71ebb368421239593e015e76d1053"
+          }
+        },
+        {
+          "client_id": "449832581259-8u4gseafapqpcgeolmiqcnevvgto7j75.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC75zBRgNSTDUXVCx2ASDeBMa13PG3wWu8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449832581259-8u4gseafapqpcgeolmiqcnevvgto7j75.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

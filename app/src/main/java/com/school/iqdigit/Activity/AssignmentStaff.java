@@ -150,6 +150,7 @@ public class AssignmentStaff extends AppCompatActivity implements GetClikedImage
     private CheckBox chkPages;
     private File mainpdf = new File("null");
     private RequestBody requestPdf;
+    private RequestBody requestFile;
     private Uri filePath;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -410,12 +411,13 @@ public class AssignmentStaff extends AppCompatActivity implements GetClikedImage
                                             }
                                         } else {
                                             progressDialog.show();
-                                            if (!mainfile.getPath().equals("null")) {
-                                                try {
-                                                    uploadFile(selectedImage);
-                                                } catch (IOException e) {
-                                                    e.printStackTrace();
-                                                }
+                                            try {
+                                                uploadFile(selectedImage);
+                                            } catch (IOException e) {
+                                                e.printStackTrace();
+                                            }
+                                           /* if (!mainfile.getPath().equals("null")) {
+
                                             } else {
                                                 progressDialog.show();
                                                 try {
@@ -442,7 +444,7 @@ public class AssignmentStaff extends AppCompatActivity implements GetClikedImage
                                                 } catch (IOException e) {
                                                     e.printStackTrace();
                                                 }
-                                            }
+                                            }*/
                                         }
 
                                     } else {
@@ -837,42 +839,16 @@ public class AssignmentStaff extends AppCompatActivity implements GetClikedImage
     }
 
     private void uploadFile(Uri fileUri) throws IOException {
-
-       /* if (chkAssessment.isChecked() || !mainpdf.getPath().equals("null")) {
-            assessment = "0";
-        } else {
-            assessment = "0";
-        }*/
         assessment = "0";
         if (rl_Images.getVisibility() == View.VISIBLE) {
             if (assessment_images.size() > 0) {
                 createPDFNew();
                 Log.d(TAG, mainpdf + " pdf");
-            } else {
-                Toast.makeText(getApplicationContext(), "Please Add image", Toast.LENGTH_LONG).show();
             }
         }
         if (!mainfile.getPath().equals("null")) {
             main = new Compressor(this).compressToFile(mainfile);
-        } else {
-            bytearrayoutputstream = new ByteArrayOutputStream();
-            Drawable drawable = getResources().getDrawable(R.drawable.homework_pic);
-            Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 60, bytearrayoutputstream);
-            file = new File(Environment.getExternalStorageDirectory() + "/SampleImage.JPEG");
-            try {
-                file.createNewFile();
-                FileOutputStream fileoutputstream = new FileOutputStream(file);
-                fileoutputstream.write(bytearrayoutputstream.toByteArray());
-                fileoutputstream.close();
-                Log.d(TAG, file.getAbsolutePath());
-                mainfile = new File(file.getAbsolutePath());
-                main = new Compressor(this).compressToFile(mainfile);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
         }
-        //creating request body for
         max = edMaximum.getText().toString();
         if (remarksitem.equalsIgnoreCase("Marks")) {
             if (!max.equals("")) {
@@ -940,19 +916,21 @@ public class AssignmentStaff extends AppCompatActivity implements GetClikedImage
                 Toast.makeText(AssignmentStaff.this, "Please Enter Maximum marks", Toast.LENGTH_LONG).show();
             }
         } else {
-            RequestBody requestFile = RequestBody.create(MediaType.parse("image/*"), main);
+            if(!mainfile.getPath().equals("null")) {
+                requestFile = RequestBody.create(MediaType.parse("image/*"), main);
+            }else {
+                requestFile = RequestBody.create(MediaType.parse("image/*"), "");
+            }
             if (rl_Images.getVisibility() == View.VISIBLE) {
                 if (assessment_images.size() > 0) {
                     requestPdf = RequestBody.create(MediaType.parse("application/pdf"), mainpdf);
                     Log.d(TAG, mainpdf + " pdf");
                 } else {
+                    assessment_images.clear();
                     requestPdf = RequestBody.create(MediaType.parse("application/pdf"), "");
                 }
             }
-           /* if (!mainpdf.getPath().equals("null")) {
-                requestPdf = RequestBody.create(MediaType.parse("application/pdf"), mainpdf);
-                Log.d(TAG, mainpdf + " direct pdf");
-            }*/
+
 
             RequestBody a_title = RequestBody.create(MediaType.parse("text/plain"), _title);
             RequestBody a_description = RequestBody.create(MediaType.parse("text/plain"), _description);
@@ -996,7 +974,8 @@ public class AssignmentStaff extends AppCompatActivity implements GetClikedImage
                 @Override
                 public void onFailure(Call<DefaultResponse> call, Throwable t) {
                     progressDialog.dismiss();
-                    Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
+                    Log.d(TAG, t.getMessage());
+                    //Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
                 }
             });
         }

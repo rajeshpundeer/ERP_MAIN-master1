@@ -540,6 +540,24 @@ android {
             resValue "string", "app_name_main", "Radiant"
             resValue "string", "tagline", ""
         }
+        bachpanschoolsolan {
+            dimension "version"
+            applicationIdSuffix ".bachpanschoolsolan"
+            versionNameSuffix "-bachpanschoolsolan"
+            resValue "string", "app_name", "bachpanschoolsolan"
+            buildConfigField("String", "BASE_UR", "\"https://bachpan.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Bachpan Play School"
+            resValue "string", "tagline", ""
+        }
+        futurebright {
+            dimension "version"
+            applicationIdSuffix ".futurebright"
+            versionNameSuffix "-futurebright"
+            resValue "string", "app_name", "futurebright"
+            buildConfigField("String", "BASE_UR", "\"https://future.iqdigit.com/\"")
+            resValue "string", "app_name_main", "Future Pride Public School"
+            resValue "string", "tagline", ""
+        }
     }
     compileOptions {
         sourceCompatibility = 1.8
