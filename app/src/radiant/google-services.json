@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "117237312909",
+    "project_id": "radiant-4322d",
+    "storage_bucket": "radiant-4322d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117237312909:android:08df7ef893bf0b7142e1c4",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.radiant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117237312909-oq7cq8di3em1sd1de0s7rmcq64rcgh65.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATyF7J8lHV0JgYlrD6hZeXID5nnO_atVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117237312909-oq7cq8di3em1sd1de0s7rmcq64rcgh65.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
