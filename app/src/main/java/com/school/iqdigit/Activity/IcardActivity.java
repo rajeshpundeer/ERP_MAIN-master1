@@ -260,6 +260,7 @@ public class IcardActivity extends AppCompatActivity implements View.OnClickList
                                 if (defaultResponse.isErr() == false) {
                                     main = new File("");
                                     Toast.makeText(getApplicationContext(), "Images Uploaded Successfully", Toast.LENGTH_LONG).show();
+                                    finish();
                                 } else {
                                     Toast.makeText(getApplicationContext(), "Some error occurred...", Toast.LENGTH_LONG).show();
                                 }

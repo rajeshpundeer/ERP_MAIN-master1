@@ -11,16 +11,12 @@
         android:gravity="center_vertical"
         android:background="@drawable/ic_corner_view_one"
         android:orientation="horizontal">
-        <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp">
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/student_image"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 app:civ_border_width="2dp"
                 app:civ_border_color="@color/gray"/>
-        </RelativeLayout>
         <TextView
             android:id="@+id/tvStudentName"
             android:layout_width="0dp"
@@ -28,7 +24,7 @@
             android:layout_height="wrap_content"
             android:text="@string/student_name"
             android:textColor="@color/grey_80"
-            android:fontFamily="@font/quicksand_bold"
+            android:fontFamily="@font/lato_regular"
             android:background="@drawable/ic_corner_view_one"
             android:textSize="16sp"
             android:gravity="center"
@@ -50,7 +46,7 @@
             android:fontFamily="@font/quicksand_bold"
             android:textColor="@color/grey_80"
             android:background="@drawable/ic_corner_view_one"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:padding="@dimen/fivedp"
             android:gravity="center"
             android:typeface="serif"/>
@@ -70,7 +66,7 @@
             android:fontFamily="@font/quicksand_bold"
             android:textColor="@color/grey_80"
             android:background="@drawable/ic_corner_view_one"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:padding="@dimen/fivedp"
             android:gravity="center"
             android:typeface="serif"/>

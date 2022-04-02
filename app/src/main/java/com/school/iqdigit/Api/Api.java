@@ -33,6 +33,7 @@ import com.school.iqdigit.Model.ErrorResponse;
 import com.school.iqdigit.Model.ExamStaffResponse;
 import com.school.iqdigit.Model.ExamsResponse;
 import com.school.iqdigit.Model.FeeReceiptistResponse;
+import com.school.iqdigit.Model.FeeStatusResponse;
 import com.school.iqdigit.Model.FeelistdataResponse;
 import com.school.iqdigit.Model.GatewaydataResponse;
 import com.school.iqdigit.Model.GetCurrentTime;
@@ -772,6 +773,11 @@ public interface Api {
 
     @GET("getstaffprofile/{id}")
     Call<StaffProfileResponse> getgetstaffprofile(
+            @Path("id") String id
+    );
+
+    @GET("validate_payfee_attempt/{id}")
+    Call<FeeStatusResponse> getvalidatePayfeeAttempt(
             @Path("id") String id
     );
 }

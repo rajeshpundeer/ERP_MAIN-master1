@@ -5,10 +5,13 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.content.ContextCompat;
@@ -33,6 +37,7 @@ import com.bumptech.glide.Glide;
 import com.google.android.material.snackbar.Snackbar;
 import com.school.iqdigit.Api.RetrofitClient;
 import com.school.iqdigit.Model.FeeReceiptistResponse;
+import com.school.iqdigit.Model.FeeStatusResponse;
 import com.school.iqdigit.Model.GatewaydataResponse;
 import com.school.iqdigit.Model.GetFeeOrderIdResponse;
 import com.school.iqdigit.Model.ProfileResponse;
@@ -95,6 +100,13 @@ public class feepayment extends AppCompatActivity {
     private String TAG = "feepayment";
     private String merchant_id, access_code, api_key, redirect_url, return_url_reg, cancel_url_reg, orderId,orderIdtrack1;
     private boolean checkinternet;
+    private String feeStatus;
+    private String feeStatusMsg;
+    private String fathername;
+    private String mothername;
+    private String rollno;
+    private String admno;
+    private String classr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,12 +145,39 @@ public class feepayment extends AppCompatActivity {
         int currentMonth = calendar.get(Calendar.MONTH) + 1;
         int currentDay = calendar.get(Calendar.DAY_OF_MONTH);
 
-        Toast.makeText(this,"Today's Date: " + currentYear + currentMonth + currentDay, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this,"Today's Date: " + currentYear + currentMonth + currentDay, Toast.LENGTH_SHORT).show();
         mProg.setMessage("Loading.....");
         mProg.setTitle(R.string.app_name);
         mProg.show();
 
         final User user = SharedPrefManager.getInstance(feepayment.this).getUser();
+
+        //get payment status from api
+        if (InternetCheck.isInternetOn(feepayment.this) == true) {
+            mProg.setMessage("Loading.....");
+            mProg.setTitle(R.string.app_name);
+            mProg.show();
+
+            Call<FeeStatusResponse> call12 = RetrofitClient
+                    .getInstance().getApi().getvalidatePayfeeAttempt(user.getId());
+            call12.enqueue(new Callback<FeeStatusResponse>() {
+                @Override
+                public void onResponse(Call<FeeStatusResponse> call, Response<FeeStatusResponse> response) {
+                        mProg.dismiss();
+                        feeStatus = response.body().validate_payfee_attempt.can_proceed;
+                        feeStatusMsg = response.body().validate_payfee_attempt.message;
+                        Log.d(TAG , feeStatus+" "+feeStatusMsg);
+                }
+                @Override
+                public void onFailure(Call<FeeStatusResponse> call, Throwable t) {
+                    mProg.dismiss();
+                }
+            });
+        }
+        else {
+            showsnackbar();
+        }
+
         paynow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -274,29 +313,94 @@ public class feepayment extends AppCompatActivity {
 
             }
         });
+//Check Gateway Profile
 
+        Call<GatewaydataResponse> call = RetrofitClient
+                .getInstance().getApi().getGatewaydata(user.getId());
+        call.enqueue(new Callback<GatewaydataResponse>() {
+            @Override
+            public void onResponse(Call<GatewaydataResponse> call, Response<GatewaydataResponse> response) {
+
+                if(response.isSuccessful()) {
+                    GatewaydataResponse gatewaydataResponse = response.body();
+                    Gatewayname = gatewaydataResponse.getGateway_deatils().getGateway_provider();
+                    access_code = gatewaydataResponse.getGateway_deatils().getAccess_code();
+                    merchant_id = gatewaydataResponse.getGateway_deatils().getMerchant_id();
+                    redirect_url = gatewaydataResponse.getGateway_deatils().getRedirect_url();
+                    return_url_reg = gatewaydataResponse.getGateway_deatils().getReturn_url_reg();
+                    cancel_url_reg = gatewaydataResponse.getGateway_deatils().getCancel_url_reg();
+                    api_key = gatewaydataResponse.getGateway_deatils().getApi_key();
+                    //  student_addmno.setText(Gatewayname+" "+access_code+" "+merchant_id+" "+ redirect_url+" "+return_url_reg+ " "+ cancel_url_reg+" ");
+
+                    if (Gatewayname.equals("traknpay")) {
+                        GATEWAY_NAME_CODE = 0;
+                    } else if (Gatewayname.equals("hdfc")) {
+                        GATEWAY_NAME_CODE = 1;
+                    } else {
+                        paynowbtn.setVisibility(View.GONE);
+                        Toast.makeText(feepayment.this, "Online feestructure payment not available", Toast.LENGTH_SHORT).show();
+                        GATEWAY_NAME_CODE = 2;
+                    }
+                    Log.d("GATEWAY_NAME_CODE",Integer.toString(GATEWAY_NAME_CODE));
+                }else
+                {
+                    Toast.makeText(feepayment.this, "Online feestructure payment not available", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<GatewaydataResponse> call, Throwable t) {
+
+            }
+        });
 
         paynowbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (GATEWAY_NAME_CODE == 0) {
-                    if (InternetCheck.isInternetOn(feepayment.this) == true) {
-                        getorderid1();
-                        //paybytraknpay();
-                    }
-                    else {
-                        showsnackbar();
-                    }
-                } else if (GATEWAY_NAME_CODE == 1) {
-                    if (InternetCheck.isInternetOn(feepayment.this) == true) {
-                        payByCCavenue();
-                    }else {
-                        showsnackbar();
-                    }
-                } else if (GATEWAY_NAME_CODE == 2) {
-
-                    Toast.makeText(feepayment.this, "Online Fee Payment not available", Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder dialog=new AlertDialog.Builder(feepayment.this);
+                dialog.setMessage(feeStatusMsg);
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                    dialog.setMessage(Html.fromHtml(feeStatusMsg, Html.FROM_HTML_MODE_LEGACY));
+                } else {
+                    dialog.setMessage(Html.fromHtml(feeStatusMsg));
                 }
+                dialog.setTitle("Important Note");
+                if(feeStatus.equalsIgnoreCase("Yes")) {
+                    dialog.setPositiveButton("Pay Now",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+                                    //Fee Payment connect to payment gateway
+                                    if (GATEWAY_NAME_CODE == 0) {
+                                        if (InternetCheck.isInternetOn(feepayment.this) == true) {
+                                            getorderid1();
+                                            //paybytraknpay();
+                                        }
+                                        else {
+                                            showsnackbar();
+                                        }
+                                    } else if (GATEWAY_NAME_CODE == 1) {
+                                        if (InternetCheck.isInternetOn(feepayment.this) == true) {
+                                            payByCCavenue();
+                                        }else {
+                                            showsnackbar();
+                                        }
+                                    } else if (GATEWAY_NAME_CODE == 2) {
+
+                                        Toast.makeText(feepayment.this, "Online Fee Payment not available", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                }
+                dialog.setNegativeButton("cancel",new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog alertDialog=dialog.create();
+                alertDialog.show();
+
             }
         });
 
@@ -309,43 +413,7 @@ public class feepayment extends AppCompatActivity {
         });
 
 
-        //Check Gateway Profile
 
-        Call<GatewaydataResponse> call = RetrofitClient
-                .getInstance().getApi().getGatewaydata(user.getId());
-        call.enqueue(new Callback<GatewaydataResponse>() {
-            @Override
-            public void onResponse(Call<GatewaydataResponse> call, Response<GatewaydataResponse> response) {
-                if(response.isSuccessful()) {
-                    GatewaydataResponse gatewaydataResponse = response.body();
-                    Gatewayname = gatewaydataResponse.getGateway_deatils().getGateway_provider();
-                    access_code = gatewaydataResponse.getGateway_deatils().getAccess_code();
-                    merchant_id = gatewaydataResponse.getGateway_deatils().getMerchant_id();
-                    redirect_url = gatewaydataResponse.getGateway_deatils().getRedirect_url();
-                    return_url_reg = gatewaydataResponse.getGateway_deatils().getReturn_url_reg();
-                    cancel_url_reg = gatewaydataResponse.getGateway_deatils().getCancel_url_reg();
-                    api_key = gatewaydataResponse.getGateway_deatils().getApi_key();
-                    //  student_addmno.setText(Gatewayname+" "+access_code+" "+merchant_id+" "+ redirect_url+" "+return_url_reg+ " "+ cancel_url_reg+" ");
-                    if (Gatewayname.equals("traknpay")) {
-                        GATEWAY_NAME_CODE = 0;
-                    } else if (Gatewayname.equals("hdfc")) {
-                        GATEWAY_NAME_CODE = 1;
-                    } else {
-                        paynowbtn.setVisibility(View.GONE);
-                        Toast.makeText(feepayment.this, "Online feestructure payment not available", Toast.LENGTH_SHORT).show();
-                        GATEWAY_NAME_CODE = 2;
-                    }
-                }else
-                {
-                    Toast.makeText(feepayment.this, "Online feestructure payment not available", Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<GatewaydataResponse> call, Throwable t) {
-
-            }
-        });
 
         // Get Data of User to show at Header of This page.
         Call<ProfileResponse> call2 = RetrofitClient
@@ -359,6 +427,11 @@ public class feepayment extends AppCompatActivity {
                     studenr_class.setText("Class: " + profileResponse.getUserprofile().getClass_r());
                     student_addmno.setText("Adm. No.: " + profileResponse.getUserprofile().getAdm_no());
                     student_rollno.setText("Roll No.: " + profileResponse.getUserprofile().getRoll_no());
+                    admno = profileResponse.getUserprofile().getAdm_no();
+                    rollno = profileResponse.getUserprofile().getRoll_no();
+                    classr = profileResponse.getUserprofile().getClass_r();
+                    fathername = profileResponse.getUserprofile().getFather_name();
+                    mothername = profileResponse.getUserprofile().getMother_name();
                     status.setText(profileResponse.getUserprofile().getStud_status());
                     final String imgeurl = BASE_URL2 + "office_admin/maintenance_image/student_photos/" + profileResponse.getUserprofile().getPhoto();
                     Glide.with(feepayment.this).load(imgeurl)
@@ -686,6 +759,7 @@ public class feepayment extends AppCompatActivity {
     }
 
     private void requestccpay() {
+        User user =  SharedPrefManager.getInstance(this).getUser();
         String vAccessCode = ServiceUtility.chkNull(access_code).toString().trim();
         String vMerchantId = ServiceUtility.chkNull(merchant_id).toString().trim();
         String vCurrency = ServiceUtility.chkNull("INR").toString().trim();
@@ -700,6 +774,11 @@ public class feepayment extends AppCompatActivity {
             intent.putExtra(AvenuesParams.REDIRECT_URL, ServiceUtility.chkNull(return_url_reg).toString().trim());
             intent.putExtra(AvenuesParams.CANCEL_URL, ServiceUtility.chkNull(cancel_url_reg).toString().trim());
             intent.putExtra(AvenuesParams.RSA_KEY_URL, ServiceUtility.chkNull(redirect_url).toString().trim());
+            intent.putExtra(AvenuesParams.merchant_param1, user.getId().toString());
+            intent.putExtra(AvenuesParams.merchant_param2,admno);
+            intent.putExtra(AvenuesParams.merchant_param3, classr);
+            intent.putExtra(AvenuesParams.merchant_param4, fathername);
+            intent.putExtra(AvenuesParams.merchant_param5, mothername);
             intent.putExtra(AvenuesParams.FIDS, gFid);
             startActivity(intent);
             finish();
@@ -756,9 +835,6 @@ public class feepayment extends AppCompatActivity {
 
         //PG_COUNTRY is given by the Payment Gateway. Only "IND" Allowed.
         final String PG_COUNTRY = "IND";
-
-
-
         final String PG_AMOUNT =   SharedHelper.getKey(this, "amount");
         final String PG_EMAIL = "info@iqwing.in";
         final String PG_NAME = user.getName()+" ID:"+user.getId()+" Adm ID:"+ADM;
@@ -770,13 +846,11 @@ public class feepayment extends AppCompatActivity {
         final String PG_ADD_1 = "abc";
         final String PG_ADD_2 = "abc";
         final String PG_ZIPCODE = "307023";
-        final String PG_UDF1 = "udf1";
-        final String PG_UDF2 = "udf2";
-        final String PG_UDF3 = "udf3";
-        final String PG_UDF4 = "udf4";
-        final String PG_UDF5 = "udf5";
-
-
+        final String PG_UDF1 = user.getId().toString();
+        final String PG_UDF2 =  admno;
+        final String PG_UDF3 = classr;
+        final String PG_UDF4 = fathername;
+        final String PG_UDF5 = mothername;
       //  Random rnd = new Random();
        // int n = 100000 + rnd.nextInt(900000);
         PG_ORDER_ID = orderIdtrack1;
@@ -962,5 +1036,36 @@ public class feepayment extends AppCompatActivity {
                 });
         snackbar.setActionTextColor(Color.RED);
         snackbar.show();
+    }
+
+    @Override
+    protected void onRestart() {
+        final User user = SharedPrefManager.getInstance(feepayment.this).getUser();
+        //get payment status from api it is done or not
+        if (InternetCheck.isInternetOn(feepayment.this) == true) {
+            mProg.setMessage("Loading.....");
+            mProg.setTitle(R.string.app_name);
+            mProg.show();
+
+            Call<FeeStatusResponse> call12 = RetrofitClient
+                    .getInstance().getApi().getvalidatePayfeeAttempt(user.getId());
+            call12.enqueue(new Callback<FeeStatusResponse>() {
+                @Override
+                public void onResponse(Call<FeeStatusResponse> call, Response<FeeStatusResponse> response) {
+                    mProg.dismiss();
+                    feeStatus = response.body().validate_payfee_attempt.can_proceed;
+                    feeStatusMsg = response.body().validate_payfee_attempt.message;
+                    Log.d(TAG , feeStatus+" "+feeStatusMsg);
+                }
+                @Override
+                public void onFailure(Call<FeeStatusResponse> call, Throwable t) {
+                    mProg.dismiss();
+                }
+            });
+        }
+        else {
+            showsnackbar();
+        }
+        super.onRestart();
     }
 }

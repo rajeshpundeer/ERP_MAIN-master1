@@ -4,27 +4,29 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.DataSource;
+import com.bumptech.glide.load.engine.GlideException;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.bumptech.glide.Glide;
 import com.school.iqdigit.Activity.IcardActivity;
 import com.school.iqdigit.Api.RetrofitClient;
 import com.school.iqdigit.Model.DefaultResponse;
-import com.school.iqdigit.Modeldata.StudentsIcardResponse;
 import com.school.iqdigit.Modeldata.StudentsPhoto;
 import com.school.iqdigit.R;
 import com.school.iqdigit.interfaces.IcardStudentClicked;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 import retrofit2.Call;
@@ -68,13 +70,14 @@ public class IcardAdapter extends RecyclerView.Adapter<IcardAdapter.UsersViewHol
             usersViewHolder.btnStatusLock.setVisibility(View.GONE);
             usersViewHolder.btnStatusUnlock.setVisibility(View.VISIBLE);
         }
+        //"https://media.glamour.com/photos/5695aa8e93ef4b09520dfd8f/master/w_1600%2Cc_limit/sex-love-life-2009-12-1207-01_profile_pic_li.jpg
+        Log.d("photo",studentdetail.getPre_image());
 
         Glide.with(mCtx)
-                .load(studentdetail.getPre_image().toString()) // image url
-                .override(50, 50) // resizing
-                .centerCrop()
+                .load(studentdetail.getPre_image())
+                .override(50, 50)
+                .error(R.drawable.profile_color)
                 .into(usersViewHolder.student_image);
-
         usersViewHolder.btnStatusUnlock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

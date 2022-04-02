@@ -17,14 +17,38 @@ apply plugin: 'com.google.gms.google-services'
 
 
 android {
-   /* signingConfigs {
-        config {
-            storeFile file('C:\\Users\\ilikewebsite\\Desktop\\Projects\\ERP Solution\\Magnet\\magnetkey.jks')
-            keyAlias = 'school'
-            storePassword 'school'
-            keyPassword 'school'
+    signingConfigs {
+        debug {
+            storeFile file('D:\\AndroidProjects\\keys\\oxfordkotli_key.jks')
+            storePassword 'iqwing@123'
+            keyAlias 'key0'
+            keyPassword 'iqwing@123'
         }
-    }*/
+    }
+
+    /* signingConfigs {
+         debug {
+             storeFile file(kotlin_version)
+             storePassword kotlin_version
+             keyAlias kotlin_version
+             keyPassword kotlin_version
+         }
+         oxfordkotli1 {
+             storeFile file('D:\\AndroidProjects\\keys\\oxfordkotli_key.jks')
+             storePassword 'iqwing@123'
+             keyAlias 'key0'
+             keyPassword 'iqwing@123'
+         }
+     }*/
+
+    /* signingConfigs {
+         config {
+             storeFile file('C:\\Users\\ilikewebsite\\Desktop\\Projects\\ERP Solution\\Magnet\\magnetkey.jks')
+             keyAlias = 'school'
+             storePassword 'school'
+             keyPassword 'school'
+         }
+     }*/
     packagingOptions {
         exclude 'com/itextpdf/io/font/cmap_info.txt'
 
@@ -36,8 +60,8 @@ android {
         applicationId "com.school.iqdigit"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 75
-        versionName "1.75"
+        versionCode 78
+        versionName "1.78"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         manifestPlaceholders = [
@@ -558,11 +582,28 @@ android {
             resValue "string", "app_name_main", "Future Pride Public School"
             resValue "string", "tagline", ""
         }
+        stmary {
+            dimension "version"
+            applicationIdSuffix ".stmary"
+            versionNameSuffix "-stmary"
+            resValue "string", "app_name", "ST Mary Sidhpur"
+            buildConfigField("String", "BASE_UR", "\"https://stmary.iqdigit.com/\"")
+            resValue "string", "app_name_main", "ST Mary Sr. Sec. School Sidhpur"
+            resValue "string", "tagline", ""
+        }
+        davnadaun {
+            dimension "version"
+            applicationIdSuffix ".davnadaun"
+            versionNameSuffix "-davnadaun"
+            resValue "string", "app_name", "DAV Nadaun"
+            buildConfigField("String", "BASE_UR", "\"https://davndn.iqdigit.com/\"")
+            resValue "string", "app_name_main", "DAV PUBLIC SR. SEC. SCHOOL ,Nadaun(H.P.)"
+            resValue "string", "tagline", "  "
+        }
     }
     compileOptions {
         sourceCompatibility = 1.8
-        targetCompatibility = 1.8
-    }
+        targetCompatibility = 1.8    }
 }
 
 //
@@ -570,9 +611,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //noinspection GradleCompatible
     //   implementation 'com.jakewharton:butterknife:6.1.0'
-    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.android.volley:volley:1.2.1'
     //noinspection GradleCompatible
-    implementation 'com.android.support:multidex:1.0.0'
+    implementation 'com.android.support:multidex:2.0.1'
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.github.jkwiecien:EasyImage:2.0.4'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
@@ -590,7 +631,10 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
     implementation 'de.hdodenhof:circleimageview:3.0.0'
-    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.github.bumptech.glide:annotations:4.11.0'
+    implementation "com.github.bumptech.glide:okhttp3-integration:4.11.0"
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'com.google.firebase:firebase-messaging:20.1.0'
     implementation 'com.onesignal:OneSignal:3.12.4'
     implementation 'com.github.smarteist:autoimageslider:1.3.2'
@@ -610,7 +654,6 @@ dependencies {
     implementation 'com.android.support:design:30.0.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'es.voghdev.pdfviewpager:library:1.1.2'
-    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
     implementation 'com.google.firebase:firebase-analytics:17.4.4'
     implementation 'com.google.firebase:firebase-crashlytics:17.1.1'

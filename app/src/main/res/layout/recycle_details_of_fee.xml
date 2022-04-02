@@ -14,6 +14,7 @@
             android:id="@+id/feetype"
             android:gravity="start"
             android:paddingStart="20dp"
+            android:paddingBottom="3dp"
             android:layout_weight="0.33"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -24,6 +25,7 @@
             android:gravity="center"
             android:layout_weight="0.33"
             android:layout_width="0dp"
+            android:paddingBottom="3dp"
             android:layout_height="wrap_content"
             android:textColor="@color/Grey_dark"
             android:textSize="16sp"/>
@@ -32,6 +34,7 @@
             android:gravity="center"
             android:layout_weight="0.30"
             android:layout_width="0dp"
+            android:paddingBottom="3dp"
             android:layout_height="wrap_content"
             android:textColor="@color/Grey_dark"
             android:textSize="18sp"/>

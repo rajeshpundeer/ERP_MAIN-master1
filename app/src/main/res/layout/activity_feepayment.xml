@@ -265,7 +265,7 @@
                     android:paddingEnd="20dp"
                     android:background="@drawable/button_shape"
                     android:textSize="15dp"
-                    android:text="@string/pay_now"
+                    android:text="@string/proceed"
                     />
             </LinearLayout>
 

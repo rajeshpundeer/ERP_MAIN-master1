@@ -122,7 +122,7 @@ public class loginActivity extends AppCompatActivity {
                     return;
                 }
                 mProg.setMessage("Loading.....");
-                mProg.setTitle(R.string.app_name_main);
+                mProg.setTitle(R.string.app_name);
                 mProg.show();
 
                 if (verifyCodeET.getText().toString().trim().equalsIgnoreCase(String.valueOf(otp))) {

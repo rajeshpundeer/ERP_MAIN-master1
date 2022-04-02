@@ -60,6 +60,7 @@
         android:background="@drawable/ic_corner_view_one"
         android:layout_width="250dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
         android:layout_below="@+id/tvInfo"
         android:layout_height="250dp">
         <TextView
@@ -83,7 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:clickable="true"
@@ -107,6 +108,7 @@
         android:clickable="true"
         android:background="@drawable/ic_btn_view_one"
         android:padding="@dimen/fivedp"
+        android:gravity="center"
         android:text="@string/submit_your_pic"
         android:textColor="@color/white"
         android:textSize="18sp"

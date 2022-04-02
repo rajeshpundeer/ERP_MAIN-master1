@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "228461168792",
+    "project_id": "dav-nadaun",
+    "storage_bucket": "dav-nadaun.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228461168792:android:24b0d730bc92f38d7ba8ed",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.davnadaun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "228461168792-kupsq8h7a8j5mo4j1ng0jtg6sb92h39r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.school.iqdigit.davnadaun",
+            "certificate_hash": "9ff211329eb71ebb368421239593e015e76d1053"
+          }
+        },
+        {
+          "client_id": "228461168792-ft1hqs14pt0u55eluavp9padb5vnm0sv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaH6m5LmYKvWktXzxw2F3XTujLzutb84Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "228461168792-ft1hqs14pt0u55eluavp9padb5vnm0sv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

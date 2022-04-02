@@ -12,6 +12,7 @@
     <color name="white">#ffffff</color>
     <color name="transparent"> </color>
     <color name="semi_transparent">#36000000</color>
+    <color name="stroke_border">#8B8A8A</color>
 
     <color name="colorPrimaryLight">#0288D1</color>
     <color name="colorAccentDark">#F50057</color>
