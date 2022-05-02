@@ -398,4 +398,5 @@
     <string name="live_class1">Live Class Old</string>
     <string name="live_class_staff1">Live Class1</string>
     <string name="live_class_chrome">Live Class Chrome</string>
+    <string name="offline">Offline</string>
 </resources>

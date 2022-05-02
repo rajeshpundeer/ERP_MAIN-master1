@@ -17,4 +17,10 @@ public class AvenuesParams{
 	public static final String CITY = "city";
 	public static final String STATE = "state";
 	public static final String PHONE = "delivery_tel";
+	public static final String merchant_param1 = "merchant_param1";
+	public static final String merchant_param2  = "merchant_param2";
+	public static final String merchant_param3 = "merchant_param3";
+	public static final String merchant_param4 = "merchant_param4";
+	public static final String merchant_param5 = "merchant_param5";
+
 }

@@ -48,91 +48,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/alegreya_sans"
-                android:text="@string/select_class"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:typeface="serif" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:background="@drawable/background_11">
-
-                <org.angmarch.views.NiceSpinner
-                    android:id="@+id/spCompany"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="1dp"
-                    android:hint="@string/select_classes"
-                    app:hideArrow="true" />
-            </LinearLayout>
-
-            <CheckBox
-                android:id="@+id/checkallclasses"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:fontFamily="@font/alegreya_sans"
-                android:text="@string/all_classes"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:typeface="serif" />
-
-            <LinearLayout
-                android:id="@+id/llStudents"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvSelectStudent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/alegreya_sans"
-                    android:text="@string/select_student"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:typeface="serif" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:background="@drawable/background_11">
-
-                    <org.angmarch.views.NiceSpinner
-                        android:id="@+id/spSubject"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
-                        android:hint="@string/select_student"
-                        app:hideArrow="true" />
-                </LinearLayout>
-
-                <CheckBox
-                    android:id="@+id/checkallstudents"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/alegreya_sans"
-                    android:text="@string/all_students"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:typeface="serif" />
-            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
@@ -180,6 +96,90 @@
                 android:padding="5dp"
                 android:textColor="@color/Grey_dark"
                 android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/alegreya_sans"
+                android:text="@string/select_class"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:typeface="serif" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/background_11">
+
+                <org.angmarch.views.NiceSpinner
+                    android:id="@+id/spCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:hint="@string/select_classes"
+                    app:hideArrow="true" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkallclasses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/alegreya_sans"
+                android:text="@string/all_classes"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+            <LinearLayout
+                android:id="@+id/llStudents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvSelectStudent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/alegreya_sans"
+                    android:text="@string/select_student"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:typeface="serif" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/background_11">
+
+                    <org.angmarch.views.NiceSpinner
+                        android:id="@+id/spSubject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:hint="@string/select_student"
+                        app:hideArrow="true" />
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/checkallstudents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/alegreya_sans"
+                    android:text="@string/all_students"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+            </LinearLayout>
 
 
             <LinearLayout

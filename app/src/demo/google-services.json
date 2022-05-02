@@ -1,42 +1,41 @@
 {
   "project_info": {
-    "project_number": "921401293605",
-    "firebase_url": "https://fir-school-7068c.firebaseio.com",
-    "project_id": "fir-school-7068c",
-    "storage_bucket": "fir-school-7068c.appspot.com"
+    "project_number": "593004290908",
+    "project_id": "idigitproject",
+    "storage_bucket": "idigitproject.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:921401293605:android:eaeb45fb440d2cb3c7f8cc",
+        "mobilesdk_app_id": "1:593004290908:android:04d89d4b76843848e3d799",
         "android_client_info": {
           "package_name": "com.school.iqdigit.demo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "921401293605-a2nvl661m54gme9aggsdjo2liu55059n.apps.googleusercontent.com",
+          "client_id": "593004290908-75t53u86em6hdag4k9ft27sahshtfu7n.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.school.iqdigit.demo",
-            "certificate_hash": "c1f619afa1c41e36bcd69e98f3c8486b94500fe9"
+            "certificate_hash": "9ff211329eb71ebb368421239593e015e76d1053"
           }
         },
         {
-          "client_id": "921401293605-dlc0rubherdslk9lo5b0tbpea2b9thpv.apps.googleusercontent.com",
+          "client_id": "593004290908-5kkait2i1omn4tna0crmasoj1bqjr5vj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAw3h7i296n1KWBJWsW6lYNpN5HCadw6PU"
+          "current_key": "AIzaSyDJ1ZSe8-gm_V2HWobAnZj4Fx0tTnjNeNo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "921401293605-dlc0rubherdslk9lo5b0tbpea2b9thpv.apps.googleusercontent.com",
+              "client_id": "593004290908-5kkait2i1omn4tna0crmasoj1bqjr5vj.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "874946471384",
+    "project_id": "stmary-bd990",
+    "storage_bucket": "stmary-bd990.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874946471384:android:7d24d22b855d730589bead",
+        "android_client_info": {
+          "package_name": "com.school.iqdigit.stmary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874946471384-v73k47k2vbqs5euqn26bbsdu2j88t0ha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBahMNpij2S85Abj3SQzOIpFHGidz-XnNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874946471384-v73k47k2vbqs5euqn26bbsdu2j88t0ha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -111,7 +111,7 @@ public class AddAssessmentActivity extends AppCompatActivity implements GetClike
     private int STORAGE_PERMISSION = 1;
     private int REQUEST_ID_MULTIPLE_PERMISSIONS = 1;
     private boolean permissiongranted;
-    private String assessment = "1";
+    private String assessment = "3";
     RequestBody requestFile;
     File mainfile = new File("null");
     int year, year1;
@@ -147,7 +147,7 @@ public class AddAssessmentActivity extends AppCompatActivity implements GetClike
     private CheckBox chkPages;
     private File mainpdf = new File("null");
     private RequestBody requestPdf;
-    private RadioButton radio_mcq, radio_subjective;
+    private RadioButton radio_mcq, radio_subjective, radio_offline;
     private EditText ed_mcqno, ed_mcq_marks, ed_nagitive_marking;;
 
 
@@ -183,6 +183,7 @@ public class AddAssessmentActivity extends AppCompatActivity implements GetClike
         ed_nagitive_marking = findViewById(R.id.ed_nagitive_marking);
         radio_mcq = findViewById(R.id.radio_mcq);
         radio_subjective = findViewById(R.id.radio_subjective);
+        radio_offline = findViewById(R.id.radio_offline);
         llMcq = findViewById(R.id.llMcq);
         llAssessment = findViewById(R.id.llAssessment);
         ed_mcq_marks = findViewById(R.id.ed_mcq_marks);
@@ -196,7 +197,6 @@ public class AddAssessmentActivity extends AppCompatActivity implements GetClike
                     assessment = "1";
                     llAssessment.setVisibility(View.VISIBLE);
                     llMcq.setVisibility(View.GONE);
-
                 }
             }
         });
@@ -207,6 +207,16 @@ public class AddAssessmentActivity extends AppCompatActivity implements GetClike
                     assessment = "2";
                     llAssessment.setVisibility(View.GONE);
                     llMcq.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+      radio_offline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (radio_offline.isChecked()) {
+                    assessment = "3";
+                    llAssessment.setVisibility(View.VISIBLE);
+                    llMcq.setVisibility(View.GONE);
                 }
             }
         });
@@ -876,7 +886,11 @@ public class AddAssessmentActivity extends AppCompatActivity implements GetClike
                                             progressDialog.dismiss();
                                             chkAssessment.setChecked(false);
                                             startActivity(new Intent(AddAssessmentActivity.this, AssessmentstaffActivity.class));
-                                            Toast.makeText(getApplicationContext(), "Assignment Uploaded Successfully", Toast.LENGTH_LONG).show();
+                                            if(assessment.equals("3")){
+                                                Toast.makeText(getApplicationContext(), "Since you are conducting offline Test, so status of test to each student in class will set to Submitted by default.", Toast.LENGTH_LONG).show();
+                                            }else {
+                                                Toast.makeText(getApplicationContext(), "Assignment Uploaded Successfully", Toast.LENGTH_LONG).show();
+                                            }
                                             finish();
                                         } else {
                                             progressDialog.dismiss();
@@ -939,8 +953,11 @@ public class AddAssessmentActivity extends AppCompatActivity implements GetClike
                                         progressDialog.dismiss();
                                         chkAssessment.setChecked(false);
                                         startActivity(new Intent(AddAssessmentActivity.this, AssessmentstaffActivity.class));
-                                        Toast.makeText(getApplicationContext(), "Assignment Uploaded Successfully", Toast.LENGTH_LONG).show();
-                                        finish();
+                                        if(assessment.equals("3")){
+                                            Toast.makeText(getApplicationContext(), "Since you are conducting offline Test, so status of test to each student in class will set to Submitted by default.", Toast.LENGTH_LONG).show();
+                                        }else {
+                                            Toast.makeText(getApplicationContext(), "Assignment Uploaded Successfully", Toast.LENGTH_LONG).show();
+                                        }                                        finish();
                                     } else {
                                         progressDialog.dismiss();
                                         Toast.makeText(getApplicationContext(), "Some error occurred...", Toast.LENGTH_LONG).show();
@@ -1016,8 +1033,11 @@ public class AddAssessmentActivity extends AppCompatActivity implements GetClike
                                 chkAssessment.setChecked(false);
                                 startActivity(new Intent(AddAssessmentActivity.this, AssessmentstaffActivity.class));
 
-                                Toast.makeText(getApplicationContext(), "Assignment Uploaded Successfully", Toast.LENGTH_LONG).show();
-                                finish();
+                                if(assessment.equals("3")){
+                                    Toast.makeText(getApplicationContext(), "Since you are conducting offline Test, so status of test to each student in class will set to Submitted by default.", Toast.LENGTH_LONG).show();
+                                }else {
+                                    Toast.makeText(getApplicationContext(), "Assignment Uploaded Successfully", Toast.LENGTH_LONG).show();
+                                }                                finish();
                             } else {
                                 progressDialog.dismiss();
                                 Toast.makeText(getApplicationContext(), "Some error occurred...", Toast.LENGTH_LONG).show();
@@ -1080,8 +1100,11 @@ public class AddAssessmentActivity extends AppCompatActivity implements GetClike
                             progressDialog.dismiss();
                             chkAssessment.setChecked(false);
                             startActivity(new Intent(AddAssessmentActivity.this, AssessmentstaffActivity.class));
-                            Toast.makeText(getApplicationContext(), "Assignment Uploaded Successfully", Toast.LENGTH_LONG).show();
-                            finish();
+                            if(assessment.equals("3")){
+                                Toast.makeText(getApplicationContext(), "Since you are conducting offline Test, so status of test to each student in class will set to Submitted by default.", Toast.LENGTH_LONG).show();
+                            }else {
+                                Toast.makeText(getApplicationContext(), "Assignment Uploaded Successfully", Toast.LENGTH_LONG).show();
+                            }                            finish();
                         } else {
                             progressDialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Some error occurred...", Toast.LENGTH_LONG).show();

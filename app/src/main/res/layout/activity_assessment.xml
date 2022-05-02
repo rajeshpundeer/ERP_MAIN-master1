@@ -145,7 +145,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
+                    android:layout_marginRight="@dimen/tendp"
                     android:text="@string/subjective" />
+                <RadioButton android:id="@+id/radio_offline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/offline" />
             </RadioGroup>
             <LinearLayout
                 android:id="@+id/llAssessment"

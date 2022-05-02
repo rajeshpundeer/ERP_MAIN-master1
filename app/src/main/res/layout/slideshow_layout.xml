@@ -6,7 +6,7 @@
     <com.github.chrisbanes.photoview.PhotoView
         android:id="@+id/imageView_id"
         android:src="@drawable/ic_blank_image"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="Calendar Month Wise" />
