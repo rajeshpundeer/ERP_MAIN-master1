@@ -202,7 +202,8 @@ public class ExamMarksStaffActivity extends AppCompatActivity {
                 @Override
                 public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                     marksList1.set(usersViewHolder.getAdapterPosition() , charSequence.toString());
-                    StudentsbyexamList.get(position).setMarks(charSequence.toString());
+                    StudentsbyexamList.get(position).setMarks(usersViewHolder.edMarks.getText().toString());
+
                     Log.d(TAG , marksList1.size()+ " size");
                 }
 

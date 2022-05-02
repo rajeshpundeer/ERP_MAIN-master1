@@ -2,6 +2,7 @@ package com.school.iqdigit.Adapter;
 
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,7 +49,8 @@ public class GallerySlideAdapter extends PagerAdapter {
         inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.slideshow_layout,container,false);
         PhotoView photoView = (PhotoView) view.findViewById(R.id.imageView_id);
-        Glide.with(context).load(getPhotos.get(position)).into(photoView);
+        Log.d("photo",getPhotos.get(position));
+        Glide.with(context).load(getPhotos.get(position)).centerCrop().into(photoView);
         container.addView(view);
         return  view;
     }

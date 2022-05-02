@@ -48,4 +48,5 @@
     <dimen name="tensp">10sp</dimen>
     <dimen name="sevensp">7sp</dimen>
     <dimen name="fivesp">5sp</dimen>
+    <dimen name="eightdp">8dp</dimen>
 </resources>

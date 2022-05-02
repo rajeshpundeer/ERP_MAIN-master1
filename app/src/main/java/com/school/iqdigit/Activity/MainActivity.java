@@ -87,8 +87,19 @@ import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.security.Key;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.Certificate;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Enumeration;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
@@ -1141,7 +1152,7 @@ public class MainActivity extends AppCompatActivity implements ForceUpdateChecke
                             Intent shareIntent = new Intent(Intent.ACTION_SEND);
                             shareIntent.setType("text/plain");
                             shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My application name");
-                            String shareMessage = "\nHi," + getResources().getString(R.string.app_name_main) +
+                            String shareMessage = "\nHi," + getResources().getString(R.string.app_name) +
                                     " has now digitalized its many operations and launched its own Mobile Application " +
                                     getResources().getString(R.string.my_website_link)
                                     + "to bring all stakeholders (Parents, Teachers, Students) on single platform.\n\n";

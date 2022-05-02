@@ -200,7 +200,6 @@ public class AttendanceStaff1 extends AppCompatActivity implements View.OnClickL
             public void onFailure(Call<StudentsResponse> call, Throwable t) {
                 progressDialog.dismiss();
                 Toast.makeText(getApplicationContext(),t.getMessage(),Toast.LENGTH_LONG).show();
-
             }
         });
     }

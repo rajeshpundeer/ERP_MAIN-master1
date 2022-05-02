@@ -34,6 +34,7 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView student_name, studenr_class, student_addmno, student_rollno, status, addmdate, student_dob, student_gender, student_father, student_mother;
     private TextView student_mobile, student_caste, blood_group, student_address, aadhar_number, student_addmtype, result_status, pickup_point;
     private ImageView backbtn, imageView, imgAddPic;
+    private TextView tv_upload_photo;
     private ProgressDialog progressDialog;
     private boolean checkinternet;
     private String TAG = "ProfileActivity";
@@ -56,10 +57,13 @@ public class ProfileActivity extends AppCompatActivity {
         student_addmno = findViewById(R.id.student_admno);
         student_rollno = findViewById(R.id.student_rollno);
         imgAddPic = findViewById(R.id.imgAddPic);
+        tv_upload_photo = findViewById(R.id.tv_upload_photo);
         if (status_photo.equals("1")) {
             imgAddPic.setVisibility(View.VISIBLE);
+            tv_upload_photo.setVisibility(View.VISIBLE);
         } else {
             imgAddPic.setVisibility(View.GONE);
+            tv_upload_photo.setVisibility(View.GONE);
         }
         status = findViewById(R.id.status);
         addmdate = findViewById(R.id.addmdate);
@@ -88,6 +92,17 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onBackPressed();
+            }
+        });
+        tv_upload_photo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                User user = SharedPrefManager.getInstance(ProfileActivity.this).getUser();
+                Intent intent = new Intent(ProfileActivity.this, IcardActivity.class);
+                intent.putExtra("info", user.getId());
+                intent.putExtra("type","student");
+                startActivity(intent);
+                finish();
             }
         });
 
