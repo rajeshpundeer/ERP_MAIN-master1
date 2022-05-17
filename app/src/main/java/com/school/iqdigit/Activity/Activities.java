@@ -64,7 +64,7 @@ public class Activities extends AppCompatActivity {
         noavailable = findViewById(R.id.noavailable);
         User user = SharedPrefManager.getInstance(this).getUser();
         if (InternetCheck.isInternetOn(Activities.this) == true) {
-            Call<ActivitiesResponse> call = RetrofitClient.getInstance().getApi().getActivities(user.getP_class());
+            Call<ActivitiesResponse> call = RetrofitClient.getInstance().getApi().getActivities(user.getId());
             call.enqueue(new Callback<ActivitiesResponse>() {
                 @Override
                 public void onResponse(Call<ActivitiesResponse> call, Response<ActivitiesResponse> response) {

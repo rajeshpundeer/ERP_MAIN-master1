@@ -48,6 +48,49 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+
+            <LinearLayout
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:id="@+id/select_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:fontFamily="@font/alegreya_sans"
+                        android:text="@string/select_group"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/spSelectGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:hint="@string/select_group"
+                    android:background="@drawable/background_11"
+                    android:layout_margin="16dp">
+                </TextView>
+
+            </LinearLayout>
+
+
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,22 +111,6 @@
             </LinearLayout>
 
 
-
-             <!--   <TextView
-                    android:id="@+id/spinnerClass"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/thirydp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="@dimen/twentydp"
-                    android:drawableRight="@drawable/ic_spinner"
-                    android:background="@drawable/background_7"
-                    android:fontFamily="@font/alegreya_sans"
-                    android:hint="@string/select_classes"
-                    android:padding="5dp"
-                    android:textColor="@color/Grey_dark"
-                    android:textSize="18sp"
-                    android:layout_margin="16dp"
-                    />-->
                         <TextView
                             android:id="@+id/spCompany"
                             android:layout_width="match_parent"

@@ -17,6 +17,7 @@
     android:paddingBottom="@dimen/fivedp">
 
     <TextView
+
         android:id="@+id/textView"
         android:paddingLeft="10dp"
         android:textSize="@dimen/eighteensp"

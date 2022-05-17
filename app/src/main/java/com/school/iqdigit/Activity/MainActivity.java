@@ -1315,8 +1315,7 @@ public class MainActivity extends AppCompatActivity implements ForceUpdateChecke
                                             intent.putExtra("type", "feestructure");
                                             startActivity(intent);
                                         }
-                                    })
-                                    .setNegativeButton("Pay Later", new DialogInterface.OnClickListener() {
+                                    }).setNegativeButton("Pay Later", new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int id) {
                                             //  Action for 'NO' Button
                                             dialog.cancel();

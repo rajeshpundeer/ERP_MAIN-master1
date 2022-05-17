@@ -38,6 +38,7 @@ import com.school.iqdigit.Model.FeelistdataResponse;
 import com.school.iqdigit.Model.GatewaydataResponse;
 import com.school.iqdigit.Model.GetCurrentTime;
 import com.school.iqdigit.Model.GetFeeOrderIdResponse;
+import com.school.iqdigit.Model.GroupsResponse;
 import com.school.iqdigit.Model.IcardCheckResponse;
 import com.school.iqdigit.Model.ImageRespose;
 import com.school.iqdigit.Model.LiveAttendanceResponse;
@@ -135,7 +136,8 @@ public interface Api {
             @Field("desc") String desc,
             @Field("class_id") String class_id,
             @Field("isclasschecked") String isclasschecked,
-            @Field("isstuchecked") String isstuchecked
+            @Field("isstuchecked") String isstuchecked,
+            @Field("studgroupid") String studgroupid
     );
 
     @FormUrlEncoded
@@ -205,7 +207,8 @@ public interface Api {
             @Part("description") RequestBody description,
             @Part("class") RequestBody classid,
             @Part("staff_id") RequestBody staff_id,
-            @Part("ischecked") RequestBody ischecked
+            @Part("ischecked") RequestBody ischecked,
+            @Part("studgroupid") RequestBody studgroupid
     );
 
     @Multipart
@@ -480,9 +483,9 @@ public interface Api {
     @GET("liveclassurl")
     Call<LiveClass1Response> getliveclassurl();
 
-    @GET("getactivities/{classid}")
+    @GET("getactivities_new/{studid}")
     Call<ActivitiesResponse> getActivities(
-            @Path("classid") String classid
+            @Path("studid") String studid
     );
 
     @GET("getcalender/{sdate}/{edate}")
@@ -509,6 +512,10 @@ public interface Api {
     @GET("getclasses/{id}")
     Call<ClassResponse> getClasses(
             @Path("id") String sid
+    );
+
+    @GET("getstudgroups")
+    Call<GroupsResponse> getGroup(
     );
 
     @GET("getclasses_lms/{id}")

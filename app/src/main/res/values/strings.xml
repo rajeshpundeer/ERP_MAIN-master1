@@ -402,4 +402,5 @@
     <string name="proceed">Proceed</string>
     <string name="upload_photo">Upload Photo</string>
     <string name="pocket_money">Pocket Money</string>
+    <string name="select_group">Select group</string>
 </resources>

@@ -179,6 +179,7 @@ public class StudentAnsAdapter extends RecyclerView.Adapter<StudentAnsAdapter.Us
                 if (InternetCheck.isInternetOn(mCtx) == true) {
                     User user = SharedPrefManager.getInstance(mCtx).getUser();
                     Log.d(TAG, ans + " ans");
+                    Log.i(TAG, "onClick: Data  "+String.valueOf(McqLayoutList.get(i).getMcqId())+ "    "+user.getId()+"     "+ans);
                     Call<DefaultResponse> call = RetrofitClient.getInstance().getApi().setStudentMcqAns(String.valueOf(McqLayoutList.get(i).getMcqId()), user.getId(), ans);
                     call.enqueue(new Callback<DefaultResponse>() {
                         @Override
@@ -191,7 +192,7 @@ public class StudentAnsAdapter extends RecyclerView.Adapter<StudentAnsAdapter.Us
                                         submitedanswer[i] = Integer.parseInt(ans);
                                         dialog.dismiss();
                                         view1.setBackground(ContextCompat.getDrawable(mCtx, R.drawable.ic_btn_view_five));
-                                        Toast.makeText(mCtx, "Answer Submitted Successfully", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(mCtx, "Answer Submitted Successfully-------", Toast.LENGTH_SHORT).show();
                                         Log.d(TAG, response.body().getMsg() + "msg1");
                                         submittedquestions++;
                                     }

@@ -34,16 +34,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.school.iqdigit.Adapter.SingleSelectAdapter;
 import com.school.iqdigit.Api.RetrofitClient;
 import com.school.iqdigit.Model.ClassResponse;
 import com.school.iqdigit.Model.ErrorResponse;
+import com.school.iqdigit.Model.GroupsResponse;
 import com.school.iqdigit.Model.StudentsResponse;
+import com.school.iqdigit.Model.StudgroupsItem;
 import com.school.iqdigit.Modeldata.Alerts;
 import com.school.iqdigit.Modeldata.Classes;
 import com.school.iqdigit.Modeldata.Staff;
 import com.school.iqdigit.Modeldata.Students;
 import com.school.iqdigit.R;
 import com.school.iqdigit.Storage.SharedPrefManager2;
+import com.school.iqdigit.interfaces.SingleItemClick;
 import com.school.iqdigit.utility.InternetCheck;
 
 import org.angmarch.views.NiceSpinner;
@@ -59,7 +63,7 @@ import retrofit2.Response;
 public class Add_Alerts extends AppCompatActivity {
     private NiceSpinner spinner, spinner2;
     private EditText title, description;
-    private TextView tvSelectStudent;
+    private TextView tvSelectStudent,spSelectGroup;
     private ImageView submit,backbtn;
     private Uri selectedImage;
     private DatePickerDialog datePickerDialog;
@@ -81,7 +85,7 @@ public class Add_Alerts extends AppCompatActivity {
     private StringBuilder studentname = new StringBuilder();
     private StringBuilder studentid = new StringBuilder();
     private LinearLayout llStudents;
-
+    private LinearLayout select_group;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,6 +105,9 @@ public class Add_Alerts extends AppCompatActivity {
         spinner = (NiceSpinner) findViewById(R.id.spCompany);
         spinner2 = (NiceSpinner) findViewById(R.id.spSubject);
         llStudents = findViewById(R.id.llStudents);
+
+        select_group = findViewById(R.id.select_group);
+        spSelectGroup = findViewById(R.id.spSelectGroup);
 
         final Staff staff = SharedPrefManager2.getInstance(Add_Alerts.this).getStaff();
         _staffid = staff.getId();
@@ -168,6 +175,13 @@ public class Add_Alerts extends AppCompatActivity {
         }
         getClasses();
 
+
+        if (InternetCheck.isInternetOn(Add_Alerts.this) == true) {
+            getGroup();
+        } else {
+            showsnackbar();
+        }
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -219,7 +233,7 @@ public class Add_Alerts extends AppCompatActivity {
         _classid = classesid.toString();
         _subjectid = studentid.toString();
 
-        Call<ErrorResponse> call = RetrofitClient.getInstance().getApi().addalerts(_staffid,_subjectid,_title, _description,_classid,_isclasseschecked,_isstuchecked);
+        Call<ErrorResponse> call = RetrofitClient.getInstance().getApi().addalerts(_staffid,_subjectid,_title, _description,_classid,_isclasseschecked,_isstuchecked, item==null ? "" :String.valueOf(item.getId()));
         call.enqueue(new Callback<ErrorResponse>() {
             @Override
             public void onResponse(Call<ErrorResponse> call, Response<ErrorResponse> response) {
@@ -620,4 +634,88 @@ public class Add_Alerts extends AppCompatActivity {
             return selected;
         }
     }
+
+    private void getGroup() {
+
+        Call<GroupsResponse> call = RetrofitClient.getInstance().getApi().getGroup();
+        call.enqueue(new Callback<GroupsResponse>() {
+            @Override
+            public void onResponse(Call<GroupsResponse> call, Response<GroupsResponse> response) {
+
+
+                if(response.code() ==200){
+
+
+
+                    if(!response.body().getStudgroups().isEmpty()){
+                        select_group.setVisibility(View.VISIBLE);
+                        spSelectGroup.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+
+                                showGroupDialog(response.body().getStudgroups());
+                            }
+                        });
+                    }else{
+                        select_group.setVisibility(View.GONE);
+                    }
+                }
+
+
+
+
+            }
+
+            @Override
+            public void onFailure(Call<GroupsResponse> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+    StudgroupsItem item;
+    private void showGroupDialog(List<StudgroupsItem> studgroups) {
+
+        Dialog dialog = new Dialog(Add_Alerts.this);
+        dialog.setCancelable(true);
+        dialog.setContentView(R.layout.dialog_recycler);
+        Button btndialog = (Button) dialog.findViewById(R.id.btndialog);
+        Button btncancel = (Button) dialog.findViewById(R.id.btnCancel);
+        RecyclerView recyclerView = dialog.findViewById(R.id.rvClasses);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        RecyclerView.Adapter adapter = new SingleSelectAdapter(studgroups, Add_Alerts.this, new SingleItemClick() {
+            @Override
+            public void click(StudgroupsItem studgroupsItem) {
+                item = studgroupsItem;
+                //Toast.makeText(Add_Activities.this, ""+studgroupsItem.getGroupName(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        recyclerView.setAdapter(adapter);
+
+        btndialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                if(item !=null){
+                    spSelectGroup.setText(item.getGroupName());
+                }else {
+                    spSelectGroup.setText("Select Group");
+                }
+
+            }
+        });
+
+        btncancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                item = null;
+                spSelectGroup.setText("Select Group");
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+    }
+
+
 }

@@ -39,20 +39,25 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.school.iqdigit.Adapter.SingleSelectAdapter;
 import com.school.iqdigit.Api.RetrofitClient;
 import com.school.iqdigit.BuildConfig;
 import com.school.iqdigit.Model.ClassResponse;
 import com.school.iqdigit.Model.DefaultResponse;
+import com.school.iqdigit.Model.GroupsResponse;
+import com.school.iqdigit.Model.StudgroupsItem;
 import com.school.iqdigit.Modeldata.Classes;
 import com.school.iqdigit.Modeldata.Staff;
 import com.school.iqdigit.R;
 import com.school.iqdigit.Storage.SharedPrefManager2;
 import com.google.gson.Gson;
+import com.school.iqdigit.interfaces.SingleItemClick;
 import com.school.iqdigit.utility.InternetCheck;
 
 import org.angmarch.views.NiceSpinner;
@@ -78,7 +83,7 @@ public class Add_Activities extends AppCompatActivity {
     private List<Classes> classes;
     private ArrayList<Classes> classesArrayList = new ArrayList<Classes>();
     // private TextView spinnerClass;
-    private TextView spinner;
+    private TextView spinner,spSelectGroup;
     private EditText title, description;
     private TextView upload_file;
     private Button choose_date;
@@ -106,6 +111,7 @@ public class Add_Activities extends AppCompatActivity {
     private boolean checkinternet;
     private StringBuilder classesname = new StringBuilder();
     private StringBuilder classesid = new StringBuilder();
+    private LinearLayout select_group;
 
 
     @Override
@@ -125,6 +131,8 @@ public class Add_Activities extends AppCompatActivity {
         submit.setVisibility(View.GONE);
         backbtn = findViewById(R.id.backbtn);
         spinner = findViewById(R.id.spCompany);
+        select_group = findViewById(R.id.select_group);
+        spSelectGroup = findViewById(R.id.spSelectGroup);
         //  spinnerClass =  findViewById(R.id.spinnerClass);
         allclasscheck = findViewById(R.id.checkallclasses);
         checkinternet = InternetCheck.isInternetOn(Add_Activities.this);
@@ -193,6 +201,7 @@ public class Add_Activities extends AppCompatActivity {
         }
         if (InternetCheck.isInternetOn(Add_Activities.this) == true) {
             getClasses();
+            getGroup();
         } else {
             showsnackbar();
         }
@@ -263,6 +272,88 @@ public class Add_Activities extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void getGroup() {
+
+        Call<GroupsResponse> call = RetrofitClient.getInstance().getApi().getGroup();
+        call.enqueue(new Callback<GroupsResponse>() {
+            @Override
+            public void onResponse(Call<GroupsResponse> call, Response<GroupsResponse> response) {
+
+
+                if(response.code() ==200){
+
+
+
+                    if(!response.body().getStudgroups().isEmpty()){
+                        select_group.setVisibility(View.VISIBLE);
+                        spSelectGroup.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+
+                                showGroupDialog(response.body().getStudgroups());
+                            }
+                        });
+                    }else{
+                        select_group.setVisibility(View.GONE);
+                    }
+                }
+
+
+
+
+            }
+
+            @Override
+            public void onFailure(Call<GroupsResponse> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+    StudgroupsItem item;
+    private void showGroupDialog(List<StudgroupsItem> studgroups) {
+
+        Dialog dialog = new Dialog(Add_Activities.this);
+        dialog.setCancelable(true);
+        dialog.setContentView(R.layout.dialog_recycler);
+        Button btndialog = (Button) dialog.findViewById(R.id.btndialog);
+        Button btncancel = (Button) dialog.findViewById(R.id.btnCancel);
+        RecyclerView recyclerView = dialog.findViewById(R.id.rvClasses);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        RecyclerView.Adapter adapter = new SingleSelectAdapter(studgroups, Add_Activities.this, new SingleItemClick() {
+            @Override
+            public void click(StudgroupsItem studgroupsItem) {
+                item = studgroupsItem;
+                //Toast.makeText(Add_Activities.this, ""+studgroupsItem.getGroupName(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        recyclerView.setAdapter(adapter);
+
+        btndialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                if(item !=null){
+                    spSelectGroup.setText(item.getGroupName());
+                }else {
+                    spSelectGroup.setText("Select Group");
+                }
+
+            }
+        });
+
+        btncancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                item = null;
+                spSelectGroup.setText("Select Group");
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
     @Override
@@ -349,20 +440,6 @@ public class Add_Activities extends AppCompatActivity {
             }
         });
 
-
-     /*   spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                // String item = (String) i.getItemAtPosition(i);
-                String classid = totalclassesid[0][i];
-                _classid = classid;
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });*/
     }
 
     private void sendTakePictureIntent() {
@@ -420,8 +497,9 @@ public class Add_Activities extends AppCompatActivity {
         RequestBody a_classid = RequestBody.create(MediaType.parse("text/plain"), classid1);
         RequestBody a_staffid = RequestBody.create(MediaType.parse("text/plain"), _staffid);
         RequestBody a_ischecked = RequestBody.create(MediaType.parse("text/plain"), ischecked);
+        RequestBody studgroupid = RequestBody.create(MediaType.parse("text/plain"), item==null ? "" :String.valueOf(item.getId()));
 
-        Call<DefaultResponse> call = RetrofitClient.getInstance().getApi().uploadactivity(requestFile, a_title, a_description, a_classid, a_staffid, a_ischecked);
+        Call<DefaultResponse> call = RetrofitClient.getInstance().getApi().uploadactivity(requestFile, a_title, a_description, a_classid, a_staffid, a_ischecked,studgroupid);
         call.enqueue(new Callback<DefaultResponse>() {
             @Override
             public void onResponse(Call<DefaultResponse> call, Response<DefaultResponse> response) {
