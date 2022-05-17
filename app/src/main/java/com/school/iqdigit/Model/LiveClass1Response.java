@@ -3,6 +3,26 @@ package com.school.iqdigit.Model;
 public class LiveClass1Response {
     public String studurl_prefix;
     public String staffurl_prefix;
+    public String url_payfeenow;
+    public String url_pocketmoney;
+
+
+    public String getUrl_pocketmoney() {
+        return url_pocketmoney;
+    }
+
+    public void setUrl_pocketmoney(String url_pocketmoney) {
+        this.url_pocketmoney = url_pocketmoney;
+    }
+
+    public String getUrl_payfeenow() {
+        return url_payfeenow;
+    }
+
+    public void setUrl_payfeenow(String url_payfeenow) {
+        this.url_payfeenow = url_payfeenow;
+    }
+
     public String getStudurl_prefix() {
         return studurl_prefix;
     }
