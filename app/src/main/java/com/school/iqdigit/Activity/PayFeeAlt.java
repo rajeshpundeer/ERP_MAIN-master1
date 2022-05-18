@@ -64,7 +64,7 @@ public class PayFeeAlt extends AppCompatActivity {
 
         webView.getSettings().setDomStorageEnabled(true);
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setSupportZoom(true);
+        webView.getSettings().setSupportZoom(false);
         webView.getSettings().setBuiltInZoomControls(false);
 
         webView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);

@@ -1443,8 +1443,8 @@ public class MainActivity extends AppCompatActivity implements ForceUpdateChecke
                         version = response.body().getCheck().getVersion();
                         current_version = BuildConfig.VERSION_CODE;
                         minimumversion = response.body().getCheck().getMin_version() +"";
-                        manageIconStudent(response.body().getCheck().getStud_modules());
-                        manageIconStaff(response.body().getCheck().getStaff_modules());
+                       // manageIconStudent(response.body().getCheck().getStud_modules());
+                       // manageIconStaff(response.body().getCheck().getStaff_modules());
                         Log.d(TAG, version + " " + current_version + " current "+minimumversion);
                         if (InternetCheck.isInternetOn(MainActivity.this) == true) {
                             getAppVersion();
@@ -1462,135 +1462,7 @@ public class MainActivity extends AppCompatActivity implements ForceUpdateChecke
         });
     }
 
-    private void manageIconStaff(String staff_modules) {
-        LinearLayout icons1, icons2, icons3, icons4, icons5, icons6, icons7, icons8, icons9, icons10, icons11, icons12, icons13, icons14,
-                icons15, icons16, icons17, icons18, icons19, icons20, icons21;
 
-        icons1 = findViewById(R.id.icons1);
-        icons2 = findViewById(R.id.icons2);
-        icons3 = findViewById(R.id.icons3);
-        icons4 = findViewById(R.id.icons4);
-        icons5 = findViewById(R.id.icons5);
-        icons6 = findViewById(R.id.icons6);
-        icons7 = findViewById(R.id.icons7);
-        icons8 = findViewById(R.id.icons8);
-        icons9 = findViewById(R.id.icons9);
-        icons10 = findViewById(R.id.icons10);
-        icons11 = findViewById(R.id.icons11);
-        icons12 = findViewById(R.id.icons12);
-        icons13 = findViewById(R.id.icons13);
-        icons14 = findViewById(R.id.icons14);
-        icons15 = findViewById(R.id.icons15);
-        icons16 = findViewById(R.id.icons16);
-        icons17 = findViewById(R.id.icons17);
-        icons18 = findViewById(R.id.icons18);
-        icons19 = findViewById(R.id.icons19);
-        icons20 = findViewById(R.id.icons20);
-        icons21 = findViewById(R.id.icons21);
-
-
-        if(staff_modules!=null){
-
-            if(!staff_modules.equals("")){
-
-
-                String[] icons = staff_modules.split(",");
-
-                for(String icon : icons){
-
-                    switch (icon){
-                        case "1":{
-                            icons1.setVisibility(View.VISIBLE);
-                            break;
-                        }case "2":{
-                            icons2.setVisibility(View.VISIBLE);
-                            break;
-                        }case "3":{
-                            icons3.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "4":{
-                            icons4.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "5":{
-                            icons5.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "6":{
-                            icons6.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "7":{
-                            icons7.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "8":{
-                            icons8.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "9":{
-                            icons9.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "10":{
-                            icons10.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "11":{
-                            icons11.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "12":{
-                            icons12.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "13":{
-                            icons13.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "14":{
-                            icons14.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "15":{
-                            icons15.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "16":{
-                            icons16.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "17":{
-                            icons17.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "18":{
-                            icons18.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "19":{
-                            icons19.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "20":{
-                            icons20.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                        case "21":{
-                            icons21.setVisibility(View.VISIBLE);
-                            break;
-                        }
-                    }
-
-                }
-
-
-            }
-
-        }
-
-    }
 
     private void manageIconStudent(String stud_modules) {
 

@@ -734,7 +734,7 @@
                                 android:orientation="horizontal">
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon1"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -765,7 +765,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon2"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -795,7 +795,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon3"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -824,7 +824,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon4"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -866,7 +866,7 @@
                                 android:orientation="horizontal">
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon5"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -896,7 +896,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon6"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -926,7 +926,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon7"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -956,7 +956,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon8"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -998,7 +998,7 @@
                                 android:orientation="horizontal">
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon9"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1028,7 +1028,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon10"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1057,7 +1057,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon11"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1087,7 +1087,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon12"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1130,7 +1130,7 @@
 
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon13"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1158,7 +1158,7 @@
                                         android:textColor="@color/grey_40" />
                                 </LinearLayout>
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon14"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1188,7 +1188,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon15"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1217,7 +1217,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon16"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1287,7 +1287,7 @@
 
                                  </LinearLayout>-->
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon17"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1316,7 +1316,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon18"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1345,7 +1345,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon19"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1401,7 +1401,7 @@
                                  </LinearLayout>-->
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon20"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1441,7 +1441,7 @@
                                 android:gravity="center_horizontal"
                                 android:orientation="horizontal">
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon21"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1470,7 +1470,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon22"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1500,7 +1500,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon23"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1530,7 +1530,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
+
                                     android:id="@+id/icon24"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1567,16 +1567,19 @@
                                     android:gravity="center"
                                     android:orientation="vertical"/>
                             </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/spacing_mxlarge" />
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:weightSum="4"
-                                android:gravity="center_horizontal"
                                 android:orientation="horizontal">
 
                                 <LinearLayout
                                     android:id="@+id/icon25"
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -1605,7 +1608,7 @@
 
                                 <LinearLayout
                                     android:id="@+id/icon26"
-                                    android:visibility="gone"
+
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -1727,8 +1730,6 @@
                                 android:orientation="horizontal">
 
                                 <LinearLayout
-                                    android:visibility="gone"
-                                    android:id="@+id/icons1"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -1758,8 +1759,6 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
-                                    android:id="@+id/icons2"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -1789,11 +1788,9 @@
 
 
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:id="@+id/icons3"
                                     android:gravity="center"
                                     android:orientation="vertical">
 
@@ -1819,11 +1816,9 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:id="@+id/icons4"
                                     android:gravity="center"
                                     android:orientation="vertical">
 
@@ -1860,12 +1855,10 @@
                                 android:orientation="horizontal">
 
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    android:id="@+id/icons5"
                                     android:orientation="vertical">
 
                                     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -1888,11 +1881,9 @@
                                         android:textColor="@color/grey_40" />
                                 </LinearLayout>
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:id="@+id/icons6"
                                     android:gravity="center"
                                     android:orientation="vertical">
 
@@ -1916,12 +1907,10 @@
                                         android:textColor="@color/grey_40" />
                                 </LinearLayout>
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    android:id="@+id/icons7"
                                     android:orientation="vertical">
 
                                     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -1948,12 +1937,10 @@
 
 
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    android:id="@+id/icons8"
                                     android:orientation="vertical">
 
                                     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -1990,12 +1977,10 @@
                                 android:orientation="horizontal">
 
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1.1"
                                     android:gravity="center"
-                                    android:id="@+id/icons9"
                                     android:orientation="vertical">
 
                                     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -2019,11 +2004,9 @@
 
                                 </LinearLayout>
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:id="@+id/icons10"
                                     android:gravity="center"
                                     android:orientation="vertical">
 
@@ -2051,12 +2034,10 @@
 
 
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    android:id="@+id/icons11"
                                     android:orientation="vertical">
 
                                     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -2080,11 +2061,9 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:id="@+id/icons12"
                                     android:gravity="center"
                                     android:orientation="vertical">
 
@@ -2121,11 +2100,9 @@
                                 android:orientation="horizontal">
 
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1.1"
-                                    android:id="@+id/icons13"
                                     android:gravity="center"
                                     android:orientation="vertical">
 
@@ -2148,14 +2125,10 @@
                                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
                                         android:textColor="@color/grey_40" />
                                 </LinearLayout>
-
-
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:id="@+id/icons14"
                                     android:gravity="center"
                                     android:orientation="vertical">
 
@@ -2184,7 +2157,6 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1.1"
-                                    android:id="@+id/icons15"
                                     android:gravity="center"
                                     android:orientation="vertical">
 
@@ -2209,11 +2181,9 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:id="@+id/icons16"
                                     android:gravity="center"
                                     android:orientation="vertical">
 
@@ -2250,12 +2220,10 @@
                                 android:orientation="horizontal">
 
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    android:id="@+id/icons17"
                                     android:orientation="vertical">
 
                                     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -2283,7 +2251,6 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:id="@+id/icons18"
                                     android:gravity="center"
                                     android:orientation="vertical">
 
@@ -2313,7 +2280,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    android:id="@+id/icons19"
                                     android:orientation="vertical">
 
                                     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -2336,12 +2302,10 @@
                                         android:textColor="@color/grey_40" />
                                 </LinearLayout>
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    android:id="@+id/icons20"
                                     android:orientation="vertical">
 
                                     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -2365,12 +2329,10 @@
                                         android:textColor="@color/grey_40" />
                                 </LinearLayout>
                                 <LinearLayout
-                                    android:visibility="gone"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    android:id="@+id/icons21"
                                     android:orientation="vertical">
 
                                     <com.google.android.material.floatingactionbutton.FloatingActionButton
