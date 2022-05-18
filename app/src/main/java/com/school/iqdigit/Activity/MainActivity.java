@@ -30,6 +30,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.Toolbar;
 
 import android.text.Html;
+import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -53,6 +54,7 @@ import com.google.android.play.core.install.InstallStateUpdatedListener;
 import com.google.android.play.core.tasks.OnSuccessListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.itextpdf.text.pdf.parser.Line;
 import com.onesignal.OneSignal;
 import com.school.iqdigit.Adapter.GalleryAdapter;
 import com.school.iqdigit.Api.RetrofitClient;
@@ -136,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements ForceUpdateChecke
     private LinearLayout main_lay_user, main_lay_staff, lay_home, lay_settings;
     private FloatingActionButton lay_liveclass_staff,layout_LiveclassStaff1, layout_Liveclass1,lay_liveclass_stud, lay_studymaterial_staff, layout_icard_staff, layout_calender_staff;
     private FloatingActionButton layout_help, layout_help_staff, lay_erp, lay_erp_staff, lay_gallery_staff, lay_birthdy_staff;
-    private FloatingActionButton lay_more, lay_more_staff, lay_assessment, lay_assessment_staff,layout_examination_staff,wallet_layout;
+    private FloatingActionButton lay_more, lay_more_staff, lay_assessment, lay_assessment_staff,layout_examination_staff,wallet_layout,payFeeAlt;
     public String version = "";
     public String minimumversion = "";
     private Splash splash = new Splash();
@@ -204,6 +206,7 @@ public class MainActivity extends AppCompatActivity implements ForceUpdateChecke
         layout_timetable_staff = findViewById(R.id.layout_timetable_staff);
         layout_examination_staff = findViewById(R.id.layout_examination_staff);
         wallet_layout = findViewById(R.id.wallet_layout);
+        payFeeAlt = findViewById(R.id.payFeeAlt);
 
         lay_attendance = findViewById(R.id.layout_attendance);
         lay_feepayment = findViewById(R.id.layout_feepayment);
@@ -653,6 +656,15 @@ public class MainActivity extends AppCompatActivity implements ForceUpdateChecke
                 startActivity(new Intent(MainActivity.this, pocket_money_webview.class));
             }
         });
+
+
+        payFeeAlt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, PayFeeAlt.class));
+            }
+        });
+
         lay_liveclass_staff.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1427,14 +1439,12 @@ public class MainActivity extends AppCompatActivity implements ForceUpdateChecke
                 if (response.body() != null) {
                     if (response.body().getError() == false) {
                         Log.d(TAG, response.body().getCheck().getVersion());
-                        //maintenance = response.body().getCheck().getMaintenace();
+
                         version = response.body().getCheck().getVersion();
-                        // version = "27";
-                        //message = response.body().getCheck().getMMessage();
-                        //announcement = response.body().getCheck().getAnnouncement();
                         current_version = BuildConfig.VERSION_CODE;
                         minimumversion = response.body().getCheck().getMin_version() +"";
-                        //minimumversion = "27";
+                        manageIconStudent(response.body().getCheck().getStud_modules());
+                        manageIconStaff(response.body().getCheck().getStaff_modules());
                         Log.d(TAG, version + " " + current_version + " current "+minimumversion);
                         if (InternetCheck.isInternetOn(MainActivity.this) == true) {
                             getAppVersion();
@@ -1451,6 +1461,292 @@ public class MainActivity extends AppCompatActivity implements ForceUpdateChecke
             }
         });
     }
+
+    private void manageIconStaff(String staff_modules) {
+        LinearLayout icons1, icons2, icons3, icons4, icons5, icons6, icons7, icons8, icons9, icons10, icons11, icons12, icons13, icons14,
+                icons15, icons16, icons17, icons18, icons19, icons20, icons21;
+
+        icons1 = findViewById(R.id.icons1);
+        icons2 = findViewById(R.id.icons2);
+        icons3 = findViewById(R.id.icons3);
+        icons4 = findViewById(R.id.icons4);
+        icons5 = findViewById(R.id.icons5);
+        icons6 = findViewById(R.id.icons6);
+        icons7 = findViewById(R.id.icons7);
+        icons8 = findViewById(R.id.icons8);
+        icons9 = findViewById(R.id.icons9);
+        icons10 = findViewById(R.id.icons10);
+        icons11 = findViewById(R.id.icons11);
+        icons12 = findViewById(R.id.icons12);
+        icons13 = findViewById(R.id.icons13);
+        icons14 = findViewById(R.id.icons14);
+        icons15 = findViewById(R.id.icons15);
+        icons16 = findViewById(R.id.icons16);
+        icons17 = findViewById(R.id.icons17);
+        icons18 = findViewById(R.id.icons18);
+        icons19 = findViewById(R.id.icons19);
+        icons20 = findViewById(R.id.icons20);
+        icons21 = findViewById(R.id.icons21);
+
+
+        if(staff_modules!=null){
+
+            if(!staff_modules.equals("")){
+
+
+                String[] icons = staff_modules.split(",");
+
+                for(String icon : icons){
+
+                    switch (icon){
+                        case "1":{
+                            icons1.setVisibility(View.VISIBLE);
+                            break;
+                        }case "2":{
+                            icons2.setVisibility(View.VISIBLE);
+                            break;
+                        }case "3":{
+                            icons3.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "4":{
+                            icons4.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "5":{
+                            icons5.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "6":{
+                            icons6.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "7":{
+                            icons7.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "8":{
+                            icons8.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "9":{
+                            icons9.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "10":{
+                            icons10.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "11":{
+                            icons11.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "12":{
+                            icons12.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "13":{
+                            icons13.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "14":{
+                            icons14.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "15":{
+                            icons15.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "16":{
+                            icons16.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "17":{
+                            icons17.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "18":{
+                            icons18.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "19":{
+                            icons19.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "20":{
+                            icons20.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "21":{
+                            icons21.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                    }
+
+                }
+
+
+            }
+
+        }
+
+    }
+
+    private void manageIconStudent(String stud_modules) {
+
+        LinearLayout icon1,icon2,icon3,icon4,icon5,icon6,icon7,icon8,icon9,icon10,icon11,icon12,icon13,icon14,icon15,icon16,icon17,icon18,icon19,icon20,icon21,icon22,icon23,icon24,icon25,icon26;
+
+        icon1 = findViewById(R.id.icon1);
+        icon2 = findViewById(R.id.icon2);
+        icon3 = findViewById(R.id.icon3);
+        icon4 = findViewById(R.id.icon4);
+        icon5 = findViewById(R.id.icon5);
+        icon6 = findViewById(R.id.icon6);
+        icon7 = findViewById(R.id.icon7);
+        icon8 = findViewById(R.id.icon8);
+        icon9 = findViewById(R.id.icon9);
+        icon10 = findViewById(R.id.icon10);
+        icon11 = findViewById(R.id.icon11);
+        icon12 = findViewById(R.id.icon12);
+        icon13 = findViewById(R.id.icon13);
+        icon14 = findViewById(R.id.icon14);
+        icon15 = findViewById(R.id.icon15);
+        icon16 = findViewById(R.id.icon16);
+        icon17 = findViewById(R.id.icon17);
+        icon18 = findViewById(R.id.icon18);
+        icon19 = findViewById(R.id.icon19);
+        icon20 = findViewById(R.id.icon20);
+        icon21 = findViewById(R.id.icon21);
+        icon22 = findViewById(R.id.icon22);
+        icon23 = findViewById(R.id.icon23);
+        icon24 = findViewById(R.id.icon24);
+        icon25 = findViewById(R.id.icon25);
+        icon26 = findViewById(R.id.icon26);
+
+
+        if(stud_modules!=null){
+
+            if(!stud_modules.equals("")){
+
+
+                String[] icons = stud_modules.split(",");
+
+                for(String icon : icons){
+
+                    switch (icon){
+                        case "1":{
+                            icon1.setVisibility(View.VISIBLE);
+                            break;
+                        }case "2":{
+                            icon2.setVisibility(View.VISIBLE);
+                            break;
+                        }case "3":{
+                            icon3.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "4":{
+                            icon4.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "5":{
+                            icon5.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "6":{
+                            icon6.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "7":{
+                            icon7.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "8":{
+                            icon8.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "9":{
+                            icon9.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "10":{
+                            icon10.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "11":{
+                            icon11.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "12":{
+                            icon12.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "13":{
+                            icon13.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "14":{
+                            icon14.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "15":{
+                            icon15.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "16":{
+                            icon16.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "17":{
+                            icon17.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "18":{
+                            icon18.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "19":{
+                            icon19.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "20":{
+                            icon20.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "21":{
+                            icon21.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "22":{
+                            icon22.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "23":{
+                            icon23.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "24":{
+                            icon24.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "25":{
+                            icon25.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                        case "26":{
+                            icon26.setVisibility(View.VISIBLE);
+                            break;
+                        }
+                    }
+
+                }
+
+
+            }
+
+        }
+
+    }
+
     private void userlogin() {
         mProg.show();
         Staff staff = SharedPrefManager2.getInstance(this).getStaff();

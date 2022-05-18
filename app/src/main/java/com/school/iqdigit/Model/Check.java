@@ -5,6 +5,25 @@ private String version;
 private String maintenace;
 private String m_message;
 private String announcement;
+private String stud_modules;
+private String staff_modules;
+
+
+    public String getStud_modules() {
+        return stud_modules;
+    }
+
+    public void setStud_modules(String stud_modules) {
+        this.stud_modules = stud_modules;
+    }
+
+    public String getStaff_modules() {
+        return staff_modules;
+    }
+
+    public void setStaff_modules(String staff_modules) {
+        this.staff_modules = staff_modules;
+    }
 
     public String getM_message() {
         return m_message;

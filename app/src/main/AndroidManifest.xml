@@ -27,6 +27,7 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:allowBackup">
         <activity android:name=".Activity.pocket_money_webview"></activity>
+        <activity android:name=".Activity.PayFeeAlt"></activity>
         <activity android:name=".Activity.LiveClassStaff1Activity" />
         <activity android:name=".Activity.LiveClassStudent1Activity" />
         <activity
