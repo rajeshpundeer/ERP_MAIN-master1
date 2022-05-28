@@ -1530,7 +1530,6 @@
                                 </LinearLayout>
 
                                 <LinearLayout
-
                                     android:id="@+id/icon24"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
@@ -1560,12 +1559,80 @@
                                         android:textColor="@color/grey_40" />
                                 </LinearLayout>
 
+                            </LinearLayout>
+
+
+                            <!--////////////-->
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/spacing_mxlarge" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="4"
+                                android:gravity="start"
+                                android:orientation="horizontal">
+
+
                                 <LinearLayout
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
-                                    android:orientation="vertical"/>
+                                    android:orientation="vertical">
+
+                                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                        android:id="@+id/transportWebView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:clickable="true"
+                                        android:tint="@android:color/white"
+                                        app:backgroundTint="@color/indigo_300"
+                                        app:elevation="0dp"
+                                        app:fabSize="mini"
+                                        app:rippleColor="@android:color/white"
+                                        app:srcCompat="@drawable/ic_baseline_directions_bus_24"  />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/spacing_medium"
+                                        android:text="Transport"
+                                        android:textAlignment="center"
+                                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                        android:textColor="@color/grey_40" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                        android:id="@+id/libraryWebView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:clickable="true"
+                                        android:tint="@android:color/white"
+                                        app:backgroundTint="@color/red_500"
+                                        app:elevation="0dp"
+                                        app:fabSize="mini"
+                                        app:rippleColor="@android:color/white"
+                                        app:srcCompat="@drawable/ic_baseline_local_library_24"  />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/spacing_medium"
+                                        android:text="Library"
+                                        android:textAlignment="center"
+                                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                        android:textColor="@color/grey_40" />
+                                </LinearLayout>
+
                             </LinearLayout>
 
 
