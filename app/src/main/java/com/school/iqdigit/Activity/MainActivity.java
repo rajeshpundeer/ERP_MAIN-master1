@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements ForceUpdateChecke
     private LinearLayout main_lay_user, main_lay_staff, lay_home, lay_settings;
     private FloatingActionButton lay_liveclass_staff,layout_LiveclassStaff1, layout_Liveclass1,lay_liveclass_stud, lay_studymaterial_staff, layout_icard_staff, layout_calender_staff;
     private FloatingActionButton layout_help, layout_help_staff, lay_erp, lay_erp_staff, lay_gallery_staff, lay_birthdy_staff;
-    private FloatingActionButton lay_more, lay_more_staff, lay_assessment, lay_assessment_staff,layout_examination_staff,wallet_layout,payFeeAlt,transportWebView,libraryWebView;
+    private FloatingActionButton lay_more, lay_more_staff, lay_assessment, lay_assessment_staff,layout_examination_staff,wallet_layout,payFeeAlt,transportWebView,libraryWebView,libraryWebViewStaff;
     public String version = "";
     public String minimumversion = "";
     private Splash splash = new Splash();
@@ -208,6 +208,7 @@ public class MainActivity extends AppCompatActivity implements ForceUpdateChecke
         wallet_layout = findViewById(R.id.wallet_layout);
         payFeeAlt = findViewById(R.id.payFeeAlt);
         libraryWebView = findViewById(R.id.libraryWebView);
+        libraryWebViewStaff = findViewById(R.id.libraryWebViewStaff);
         transportWebView = findViewById(R.id.transportWebView);
 
         lay_attendance = findViewById(R.id.layout_attendance);
@@ -679,6 +680,14 @@ public class MainActivity extends AppCompatActivity implements ForceUpdateChecke
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, LibraryWebView.class));
+            }
+        });
+
+
+        libraryWebViewStaff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, LibraryWebViewStaff.class));
             }
         });
 

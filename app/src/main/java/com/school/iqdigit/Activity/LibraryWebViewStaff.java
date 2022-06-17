@@ -1,8 +1,5 @@
 package com.school.iqdigit.Activity;
 
-import static com.school.iqdigit.Activity.loginActivity.KEY_OTP;
-import static com.school.iqdigit.Activity.loginActivity.USER_PREF;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -10,6 +7,7 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -20,25 +18,29 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.school.iqdigit.Api.RetrofitClient;
-import com.school.iqdigit.BuildConfig;
 import com.school.iqdigit.Model.LiveClass1Response;
+import com.school.iqdigit.Modeldata.Staff;
 import com.school.iqdigit.Modeldata.User;
 import com.school.iqdigit.R;
 import com.school.iqdigit.Storage.SharedPrefManager;
+import com.school.iqdigit.Storage.SharedPrefManager2;
 import com.school.iqdigit.utility.InternetCheck;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class LibraryWebView extends AppCompatActivity {
+import static com.school.iqdigit.Activity.loginActivity.KEY_OTP;
+import static com.school.iqdigit.Activity.loginActivity.USER_PREF;
+
+public class LibraryWebViewStaff extends AppCompatActivity {
     private ImageView back, imgHome;
     private ProgressDialog mProg;
-    private String otp, mobileno, studentid;
+
     private String myURL;
     private SharedPreferences sp;
     private WebView webView;
-
+    private String otp, mobileno, teachetid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,9 +50,15 @@ public class LibraryWebView extends AppCompatActivity {
         webView = findViewById(R.id.webViewLiveClass);
         back = findViewById(R.id.backbtn);
         imgHome = findViewById(R.id.imgHome);
-        User user = SharedPrefManager.getInstance(this).getUser();
-        mobileno = user.getPhone_number();
-        studentid = user.getId();
+        final Staff staff = SharedPrefManager2.getInstance(LibraryWebViewStaff.this).getStaff();
+        mobileno = staff.getPhone_number();
+        teachetid = staff.getId();
+        imgHome = findViewById(R.id.imgHome);
+        sp = getSharedPreferences(USER_PREF, Context.MODE_PRIVATE);
+        otp = sp.getString(KEY_OTP, "");
+
+        mobileno = staff.getPhone_number();
+        teachetid = staff.getId();
         imgHome = findViewById(R.id.imgHome);
         sp = getSharedPreferences(USER_PREF, Context.MODE_PRIVATE);
         otp = sp.getString(KEY_OTP, "");
@@ -92,10 +100,10 @@ public class LibraryWebView extends AppCompatActivity {
             @Override
             public void onResponse(Call<LiveClass1Response> call, Response<LiveClass1Response> response) {
                 mProg.dismiss();
-                myURL = response.body().url_library+"&stud_id=" + studentid + "&mobile=" + mobileno + "&otp=" + otp;
+                myURL = response.body().url_library+"&teacher_id=" + teachetid + "&mobile=" + mobileno + "&otp=" + otp;
 
-                if (InternetCheck.isInternetOn(LibraryWebView.this) == true) {
-                    WebViewClients webViewClient = new WebViewClients(LibraryWebView.this);
+                if (InternetCheck.isInternetOn(LibraryWebViewStaff.this) == true) {
+                    WebViewClients webViewClient = new WebViewClients(LibraryWebViewStaff.this);
                     webView.setWebViewClient(webViewClient);
                     webView.loadUrl(myURL);
                     mProg.dismiss();
@@ -172,7 +180,7 @@ public class LibraryWebView extends AppCompatActivity {
                 .setAction(R.string.retry, new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if (InternetCheck.isInternetOn(LibraryWebView.this) == true) {
+                        if (InternetCheck.isInternetOn(LibraryWebViewStaff.this) == true) {
                             startActivity(getIntent());
                             finish();
                         }

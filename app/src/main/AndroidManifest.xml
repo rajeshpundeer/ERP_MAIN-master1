@@ -29,6 +29,7 @@
         <activity android:name=".Activity.pocket_money_webview"></activity>
         <activity android:name=".Activity.PayFeeAlt"></activity>
         <activity android:name=".Activity.LibraryWebView"></activity>
+        <activity android:name=".Activity.LibraryWebViewStaff"></activity>
         <activity android:name=".Activity.TransportWebView"></activity>
         <activity android:name=".Activity.LiveClassStaff1Activity" />
         <activity android:name=".Activity.LiveClassStudent1Activity" />
