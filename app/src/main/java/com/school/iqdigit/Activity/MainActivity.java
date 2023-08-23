@@ -51,7 +51,6 @@ import com.google.android.play.core.appupdate.AppUpdateInfo;
 import com.google.android.play.core.appupdate.AppUpdateManager;
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
 import com.google.android.play.core.install.InstallStateUpdatedListener;
-import com.google.android.play.core.tasks.OnSuccessListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.itextpdf.text.pdf.parser.Line;
@@ -66,6 +65,7 @@ import com.school.iqdigit.Model.ErrorResponse;
 import com.school.iqdigit.Model.GetAllTodayNoticeStaff;
 import com.school.iqdigit.Model.GetPhoto;
 import com.school.iqdigit.Model.IcardCheckResponse;
+import com.school.iqdigit.Model.LiveClass1Response;
 import com.school.iqdigit.Model.LoginResponse;
 import com.school.iqdigit.Model.MaintenanceResponse;
 import com.school.iqdigit.Model.NoticeStaffResponse;
@@ -111,6 +111,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.school.iqdigit.Activity.loginActivity.KEY_OTP;
+import static com.school.iqdigit.Activity.loginActivity.USER_PREF;
 import static com.school.iqdigit.Api.RetrofitClient.BASE_URL2;
 
 public class MainActivity extends AppCompatActivity implements ForceUpdateChecker.OnUpdateNeededListener {
@@ -515,13 +517,21 @@ public class MainActivity extends AppCompatActivity implements ForceUpdateChecke
 
             }
         });
+
+        //todo pay fee native
         lay_feepayment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, feepayment.class);
-                intent.putExtra("type", "feestructure");
-                startActivity(intent);
+
+                if (InternetCheck.isInternetOn(MainActivity.this) == true) {
+
+                    geturl();
+                } else {
+                    showsnackbar();
+                }
+
+
             }
         });
         lay_feereceipt.setOnClickListener(new View.OnClickListener() {
@@ -661,6 +671,7 @@ public class MainActivity extends AppCompatActivity implements ForceUpdateChecke
         });
 
 
+        //todo pay fee alt
         payFeeAlt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -788,6 +799,47 @@ public class MainActivity extends AppCompatActivity implements ForceUpdateChecke
         } else {
             showsnackbar();
         }
+    }
+
+
+
+    private SharedPreferences sp;
+    private void geturl() {
+        mProg.show();
+
+
+        Call<LiveClass1Response> call = RetrofitClient.getInstance().getApi().getliveclassurl();
+        call.enqueue(new Callback<LiveClass1Response>() {
+            @Override
+            public void onResponse(Call<LiveClass1Response> call, Response<LiveClass1Response> response) {
+                mProg.dismiss();
+
+                User user = SharedPrefManager.getInstance(MainActivity.this).getUser();
+                sp = getSharedPreferences(USER_PREF, Context.MODE_PRIVATE);
+
+               String myURL = response.body().url_payfeenow+"&stud_id=" + user.getId() + "&mobile=" + user.getPhone_number() + "&otp=" + sp.getString(KEY_OTP, "");
+
+                if (InternetCheck.isInternetOn(MainActivity.this) == true) {
+
+                    if(response.body().url_payfeenow!=null && response.body().url_payfeenow.equals("")){
+                        Intent intent = new Intent(MainActivity.this, feepayment.class);
+                        intent.putExtra("type", "feestructure");
+                        startActivity(intent);
+                    }else{
+                        startActivity(new Intent(MainActivity.this, PayFeeAlt.class));
+                    }
+
+                } else {
+                    showsnackbar();
+                }
+
+
+            }
+            @Override
+            public void onFailure(Call<LiveClass1Response> call, Throwable t) {
+                mProg.dismiss();
+            }
+        });
     }
 
     private void checkactiveuser() {

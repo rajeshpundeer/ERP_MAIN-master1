@@ -285,7 +285,7 @@ public class SubmittedStaffAdapter extends RecyclerView.Adapter<SubmittedStaffAd
                 String finalScore = score[0];
                 if (!finalScore.equals("")) {
                     System.out.println("Rate for Module is2" + finalScore);
-                    if (!edRemarks.getText().toString().equals("")) {
+                  //  if (!edRemarks.getText().toString().equals("")) {
                         Call<DefaultResponse> call = RetrofitClient.getInstance().getApi().checkassessment(finalScore, edRemarks.getText().toString(), String.valueOf(pendingAssessment.getId()));
                         // Call<DefaultResponse> call = RetrofitClient.getInstance().getApi().checkassessment(finalScore, edRemarks.getText().toString(), "105");
 
@@ -310,9 +310,9 @@ public class SubmittedStaffAdapter extends RecyclerView.Adapter<SubmittedStaffAd
                                 Toast.makeText(mCtx, t.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
-                    } else {
-                        Toast.makeText(mCtx, "Please Enter Remarks", Toast.LENGTH_SHORT).show();
-                    }
+                    //} else {
+                       // Toast.makeText(mCtx, "Please Enter Remarks", Toast.LENGTH_SHORT).show();
+                    //}
                 } else {
                     Toast.makeText(mCtx, "Please Enter Score , Percentage or Grade.", Toast.LENGTH_SHORT).show();
                 }

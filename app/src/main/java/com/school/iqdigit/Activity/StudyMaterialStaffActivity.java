@@ -93,7 +93,7 @@ public class StudyMaterialStaffActivity extends AppCompatActivity {
         webSettings.setSupportZoom(true);
         webSettings.setDisplayZoomControls(true);
         webSettings.setBuiltInZoomControls(true);
-        webSettings.setAppCacheEnabled(true);
+        //webSettings.setAppCacheEnabled(true);
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setAllowFileAccess(true);
         webSettings.setUserAgentString("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36");

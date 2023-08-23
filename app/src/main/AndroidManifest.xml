@@ -193,7 +193,8 @@
             android:name=".Activity.MoreActivity"
             android:screenOrientation="nosensor" />
 
-        <service android:name=".FCM.MyFirebaseMessagingService">
+        <service android:name=".FCM.MyFirebaseMessagingService"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -259,7 +260,8 @@
             android:screenOrientation="nosensor" />
         <activity
             android:name=".Activity.Splash"
-            android:screenOrientation="nosensor">
+            android:screenOrientation="nosensor"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -294,6 +296,33 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <receiver android:exported="false" android:name="com.onesignal.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:exported="false" android:name="com.instacart.library.truetime.BootCompletedBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+
+        <receiver android:exported="false" android:name="com.onesignal.UpgradeReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+
+        <receiver android:exported="false" android:name="com.onesignal.BootUpReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
